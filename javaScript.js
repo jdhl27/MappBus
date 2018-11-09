@@ -56,7 +56,7 @@ function ruta284() {
     var flightPath = new google.maps.Polyline({
         path: flightPlanCoordinates,
         geodesic: true,
-        strokeColor: '#FF0000',
+        strokeColor: '#feff00',
         strokeOpacity: 2.0,
         strokeWeight: 3
     });
