@@ -11,7 +11,7 @@
         #map {
             height: 80%;
             width: 50%;
-            margin-left: 1vw;
+            margin-left: 40vw;
         }
         /* Optional: Makes the sample page fill the window. */
         html, body {
@@ -22,6 +22,16 @@
     </style>
 </head>
 <body>
+<div style="margin-left: 15vw;">
+    <button onclick="initMap()">284</button>
+
+</div>
+
+<div style="margin-left: 15vw;">
+    <button onclick="nada()">Nada</button>
+
+</div>
+
 <div id="map"></div>
 <script>
 
@@ -91,6 +101,18 @@
 
         flightPath.setMap(map);
     }
+
+
+
+    function nada() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat: 6.2615713, lng: -75.5745807},
+            mapTypeId: 'terrain'
+        });}
+
+
+
 </script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbyB8tYnRbZrLoAN6liF9xOh9324pHzbU&callback=initMap">
