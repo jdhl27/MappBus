@@ -1,4 +1,15 @@
 
+/*  INICIO MAPA EN BLANCO*/
+function initMap() {
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: 6.2615713, lng: -75.5745807},
+        mapTypeId: 'terrain'
+    });
+
+
+}
+
 
 /*  RUTA TRANS MEDELLIN 284   */
 function ruta284() {
@@ -67,16 +78,7 @@ function ruta284() {
 
 
 
-/*  INICIO MAPA EN BLANCO*/
-function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
-        center: {lat: 6.2615713, lng: -75.5745807},
-        mapTypeId: 'terrain'
-    });
 
-
-}
 
 
 
