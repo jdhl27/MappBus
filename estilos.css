@@ -6,6 +6,16 @@
     src: url(fuentes/FinishedSympathy.otf);
 }
 
+@font-face {
+    font-family: subtitulo;
+    src: url(fuentes/Splendor-PersonalUse.ttf);
+}
+
+@font-face {
+    font-family: historia;
+    src: url(fuentes/TheHistoriaDemo.ttf);
+}
+
 
 #map {
     height: 80%;
@@ -40,8 +50,15 @@ html, body {
     margin: auto;
     background: white;
     border-radius: 10px;
+    font-family: historia;
 
 
+}
+
+.contenido h2{
+    font-size: 6vw;
+    margin-left: 5vw;
+    margin-top: 2vw;
 }
 
 #cerrar{
@@ -51,7 +68,7 @@ html, body {
 #cerrar + label{
     position: absolute;
     color: white;
-    font-size: 25px;
+    font-size: 1.8vw;
     z-index: 50;
     background: darkred;
     height: 40px;
@@ -64,6 +81,7 @@ html, body {
     animation-fill-mode: forwards;
     visibility: hidden;
     opacity: 0;
+    text-align: center;
 }
 
 .botones{
@@ -80,7 +98,7 @@ html, body {
         visibility: visible;
         opacity: 1;
     }
-    
+
 }
 
 
@@ -91,6 +109,8 @@ html, body {
 
 .titulo h1{
     font-size: 7vw;
+    width: 56%;
+    margin-left: 2vw;
 }
 
 .menu{
@@ -98,5 +118,19 @@ html, body {
 }
 
 .menu ul li{
-    width: 20%;
+    width: 36%;
+    float: left;
+    list-style: none;
 }
+
+.menu ul li:nth-child(1){
+    width: 20%;
+
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-family: subtitulo;
+    font-size: 3vw;
+}
+
