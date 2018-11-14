@@ -19,7 +19,7 @@
 
 #map {
     height: 80%;
-    width: 50%;
+    width: 59%;
     float: left;
     margin-top: 10vw;
 }
@@ -86,7 +86,7 @@ html, body {
 }
 
 .botones{
-    width: 50%;
+    width: 40%;
     float: left;
     position: relative;
     margin-top: 9vw;
@@ -115,27 +115,31 @@ html, body {
 
 .titulo{
     font-family: titulo;
-    width: 50%;
+    width: 30%;
 }
 
 .titulo h1{
     font-size: 6vw;
     margin-left: 2vw;
+    cursor: default;
 }
 
 .menu{
-    width: 50%;
+    width: 57%;
 }
 
 .menu ul li{
-    width: 36%;
+    width: 30%;
     float: left;
     list-style: none;
 }
 
 .menu ul li:nth-child(1){
-    width: 20%;
+    width: 14%;
+}
 
+.menu ul li:nth-child(3){
+    width: 24%;
 }
 
 .menu ul li a{
@@ -148,6 +152,8 @@ html, body {
 .menu ul li a:hover{
 
     color: #040404;
+    transition: all 0.6s;
+    border-bottom: 3px solid #03337b;
 }
 
 

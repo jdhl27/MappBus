@@ -7,7 +7,50 @@ function initMap() {
         mapTypeId: 'terrain'
     });
 
+    map.addListener('click', function(e) {
+        placeMarkerAndPanTo(e.latLng, map);
+    });
 
+    infoWindow = new google.maps.InfoWindow;
+
+//  GEOLOCATION
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Tu ubicación.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+    } else {
+        // NAVEGADOR NO SOPORTA GEOLOCALIZACION
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: El servicio de geolocalización falló.' :
+            'Error: Tu navegador no admite la geolocalización');
+        infoWindow.open(map);
+    }
+
+}
+
+
+function placeMarkerAndPanTo(latLng, map) {
+    var marker = new google.maps.Marker({
+        position: latLng,
+        map: map
+    });
+    map.panTo(latLng);
 }
 
 
@@ -18,6 +61,41 @@ function ruta284() {
         center: {lat: 6.2615713, lng: -75.5745807},
         mapTypeId: 'terrain'
     });
+
+    nfoWindow = new google.maps.InfoWindow;
+
+//  GEOLOCATION
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Tu ubicación.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+    } else {
+        // NAVEGADOR NO SOPORTA GEOLOCALIZACION
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: El servicio de geolocalización falló.' :
+            'Error: Tu navegador no admite la geolocalización');
+        infoWindow.open(map);
+    }
+
+
+
+
 
     var flightPlanCoordinates = [
         {lat: 6.301572, lng: -75.572580},
@@ -74,8 +152,12 @@ function ruta284() {
 
 
     flightPath.setMap(map);
+
 }
 
+
+
+$(".view-link").addClass("quitar");
 
 
 
