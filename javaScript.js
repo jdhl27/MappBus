@@ -157,7 +157,7 @@ function ruta284() {
 
 
 
-$(".view-link").addClass("quitar");
+
 
 
 
