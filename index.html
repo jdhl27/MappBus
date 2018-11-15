@@ -45,7 +45,7 @@
 <!-- BOTONES -->
 <div class="botones">
     <div class="mapaSolo ">
-        <span  class=" botonRuta" onclick="initMap()">Mapa</span>
+        <span class=" botonRuta" onclick="initMap()">Mapa</span>
 
     </div>
 
@@ -65,19 +65,37 @@
 
 <section class="Scontactenos">
     <div class="imgContactenos">
+        <div class="ubicacion">
+            <img src="imagenes/ubicacion.png" alt="">
 
-        <img src="imagenes/ruta.jpg" alt="">
+            <span>UBICACIÓN</span>
+            <p>Cr 53 #76-81 - Medellín Antioquia</p>
+        </div>
+
+        <div class="ubicacion">
+            <img src="imagenes/informacion.png" alt="">
+            <span>INFORMACIÓN</span>
+            <p>info@mappbus.com</p>
+        </div>
+
+        <div class="ubicacion">
+            <img src="imagenes/telefono.png" alt="">
+            <span>LLAMENOS</span>
+            <p>(+57) 4 350 786</p>
+        </div>
+
     </div>
     <div class="formularioContactenos">
-        <h1 class="tituloContactenos">Contáctenos</h1>
+        <h1 class="tituloContactenos">CONTÁCTENOS</h1>
         <form class="formulario" action="contactenos.php" method="post">
-            <input type="text" name="nombre" id="nombre" placeholder="Nombre*" required="required">
-            <input type="email" name="email" id="email" placeholder="Correo*" required="required">
-            <input type="number" name="tel" id="tel" placeholder="Telefono o Celular*" required="required">
-            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad*" required="required">
-            <textarea rows="5" cols="20" name="mensaje" id="mensaje"></textarea>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="required">
+            <input type="email" name="email" id="email" placeholder="Correo" required="required">
+            <input type="number" name="tel" id="tel" placeholder="Telefono o Celular" required="required">
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" required="required">
+            <textarea rows="5" cols="20" name="mensaje" id="mensaje"  placeholder="Mensaje"></textarea>
             <input type="checkbox" class="Autorizacion" name="acepto" required="required">
-            <label id="labelCon"><a href="TERMINOSYCONDICIONES.pdf" target="_blank">He leído y acepto los términos y condiciones de uso*</a></label>
+            <label id="labelCon"><a href="TERMINOSYCONDICIONES.pdf" target="_blank">He leído y acepto los términos y
+                condiciones de uso*</a></label>
 
             <input type="submit" class="btnEnviar" value="Enviar" id="btnEnviar">
         </form>

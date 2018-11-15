@@ -25,6 +25,10 @@
     src: url(fuentes/Oswald-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: oswaldLight;
+    src: url(fuentes/Oswald-Light.ttf);
+}
 
 /* MAPA     */
 #map {
@@ -56,7 +60,8 @@ html, body {
     animation-fill-mode: forwards;
     visibility: hidden;
     opacity: 0;
-    display: none;
+
+
 }
 
 .contenido {
@@ -66,7 +71,7 @@ html, body {
     background: white;
     border-radius: 10px;
     font-family: historia;
-    display: none;
+
 
 }
 
@@ -97,7 +102,8 @@ html, body {
     visibility: hidden;
     opacity: 0;
     text-align: center;
-    display: none;
+    left: 65vw;
+    top: 15vw;
 }
 
 
@@ -108,8 +114,8 @@ html, body {
 
 @keyframes modal {
     100% {
-        visibility: hidden;
-        opacity: 0;
+        visibility: visible;
+        opacity: 1;
 
     }
 
@@ -215,15 +221,15 @@ html, body {
 }
 
 .imgContactenos{
-    width: 57%;
+    width: 49%;
     float:left;
     position: relative;
-    padding-top: 4vw;
+    padding-top: 9vw;
 }
 
 .imgContactenos img{
-    width: 68%;
-    margin-top: 7vw;
+    width: 10%;
+    margin-top: 1vw;
     margin-left: 9vw;
 }
 
@@ -235,7 +241,7 @@ html, body {
 }
 
 .tituloContactenos{
-    text-shadow: 5px 6px 4px #aaa;
+    /* text-shadow: 5px 6px 4px #aaa; */
     font-family: oswaldBold;
     padding-bottom: 2.5vw;
     font-size: 3vw;
@@ -249,10 +255,11 @@ html, body {
     position: relative;
     width: 100%;
     margin-bottom: 13px;
-    height: 36px;
+    height: 49px;
     padding-left: 10px;
-    border: 1px solid rgba(81, 75, 164, 0.6);
+    border: 1px solid rgba(194, 192, 222, 0.73);
     border-radius: 7px;
+    color: #797474;
     font-family: oswald;
 }
 .formulario input::placeholder{
@@ -266,9 +273,9 @@ html, body {
 .formulario label{
     position: relative;
     font-family: oswald;
-    color: #5fc4d1;
+    color: #5fc4d1 !important;
     font-size: 16px;
-    margin-top: 0px;
+    top: -1.4vw;
     margin-bottom: 10px;
 }
 .formulario textarea{
@@ -277,10 +284,11 @@ html, body {
     margin-bottom: 10px;
     height: 100px;
     padding-left: 6px;
-    border: 1px solid rgba(81, 75, 164, 0.6);
+    border: 1px solid rgba(194, 192, 222, 0.73);
     margin-top: 1px;
     border-radius: 7px;
     font-family: oswald;
+    color: #797474;
 }
 .formulario div span{
     position: relative;
@@ -306,16 +314,27 @@ html, body {
 .btnEnviar{
 
     position: relative;
+
     left:  0;
+
     margin-left: 10.5vw;
-    color: #fff;
+
+    color: #fff !important;
+
     background: #5fc4d1;
+
     width: 33% !important;
+
     border:  none !important;
+
     border-radius: 50px;
+
     font-size: 20px;
+
     height: 40px !important;
+
     cursor: pointer;
+
     transition: color 0.6s, background 0.6s;
 }
 .btnEnviar:hover{
@@ -323,3 +342,34 @@ html, body {
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
+
+
+/* INFORMACION DE CONTACTO  */
+
+
+.ubicacion{
+}
+
+.ubicacion img{
+
+}
+
+.ubicacion span{
+    font-family: oswaldBold;
+    font-size: 1.7vw;
+    margin-top: 3vw;
+    padding-left: 2vw;
+}
+
+.ubicacion p{
+    font-family: oswaldLight;
+    width: 43%;
+    position: relative;
+    bottom: 3vw;
+    font-size: 1.3vw;
+    padding-left: 2vw;
+    margin-left: 14.2vw;
+    margin-top: 1vw;
+}
+
+
