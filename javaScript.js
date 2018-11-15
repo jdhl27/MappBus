@@ -1,4 +1,3 @@
-
 /*  INICIO MAPA EN BLANCO*/
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -7,7 +6,7 @@ function initMap() {
         mapTypeId: 'terrain'
     });
 
-    map.addListener('click', function(e) {
+    map.addListener('click', function (e) {
         placeMarkerAndPanTo(e.latLng, map);
     });
 
@@ -94,9 +93,6 @@ function ruta284() {
     }
 
 
-
-
-
     var flightPlanCoordinates = [
         {lat: 6.301572, lng: -75.572580},
         {lat: 6.300192, lng: -75.569817},
@@ -137,8 +133,6 @@ function ruta284() {
         {lat: 6.252805, lng: -75.575263},
         {lat: 6.252442, lng: -75.575150},
         {lat: 6.248839, lng: -75.575301}
-
-
 
 
     ];

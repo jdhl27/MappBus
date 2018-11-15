@@ -19,7 +19,7 @@
 <label for="cerrar" id="btn-cerrar">X</label>
 <div class="modal">
     <div class="contenido">
-        <h2>Visita nuestro blog</h2>
+        <h2>Bienvenidos</h2>
 
     </div>
 </div>
@@ -32,10 +32,10 @@
 
     <div class="menu">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Quiénes Somos</a></li>
-            <li><a href="#">Contáctenos</a></li>
-            <li><a href="/MappBus/TERMINOSYCONDICIONES.pdf" target="_blank">Políticas</a></li>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">QUIÉNES SOMOS</a></li>
+            <li><a href="#">CONTÁCTENOS</a></li>
+            <li><a href="/MappBus/TERMINOSYCONDICIONES.pdf" target="_blank">POLÍTICAS</a></li>
         </ul>
 
     </div>
@@ -44,21 +44,50 @@
 
 <!-- BOTONES -->
 <div class="botones">
-    <div style="margin-left: 15vw;">
-        <button onclick="initMap()">mapa</button>
+    <div class="mapaSolo ">
+        <span  class=" botonRuta" onclick="initMap()">mapa</span>
 
     </div>
 
-    <div style="margin-left: 15vw;">
-        <button onclick="ruta284()">284</button>
+    <div class="ruta284Contenedor">
+        <span class=" botonRuta" onclick="ruta284()">284</span>
 
     </div>
+
+
 </div>
 <!-- MAPA -->
 
 <div id="map"></div>
 
 
+<!-- SECCION CONTACTENOS -->
+
+<section class="Scontactenos">
+    <div class="imgContactenos">
+
+        <img src="imagenes/ruta.jpg" alt="">
+    </div>
+    <div class="formularioContactenos">
+        <h1 class="tituloContactenos">Contáctenos</h1>
+        <form class="formulario" action="contactenos.php" method="post">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre*" required="required">
+            <input type="email" name="email" id="email" placeholder="Correo*" required="required">
+            <input type="number" name="tel" id="tel" placeholder="Telefono o Celular*" required="required">
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad*" required="required">
+            <textarea rows="5" cols="20" name="mensaje" id="mensaje"></textarea>
+            <input type="checkbox" class="Autorizacion" name="acepto" required="required">
+            <label id="labelCon"><a href="TERMINOSYCONDICIONES.pdf" target="_blank">He leído y acepto los términos y condiciones de uso*</a></label>
+
+            <input type="submit" class="btnEnviar" value="Enviar" id="btnEnviar">
+        </form>
+
+    </div>
+
+
+</section>
+
+<!-- ENLACES -->
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbyB8tYnRbZrLoAN6liF9xOh9324pHzbU&callback=initMap">
 </script>
