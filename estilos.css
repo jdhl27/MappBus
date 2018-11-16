@@ -132,14 +132,24 @@ html, body {
     margin-right: 4vw;
     margin-top: 8vw;
     border: 4px solid #c1c1c1;
-    text-shadow: 1px 1px 1px #0400ff;
+    text-shadow: 1px 1px 1px #020208;
+    overflow: auto;
+    box-shadow: -10px 5px 12px #999;
+}
+.botones::-webkit-scrollbar{
+    width:6px;
+}
+
+.botones::-webkit-scrollbar-thumb {
+    background:#5fc4d1;
+    border-radius:5px;
 }
 
 .tituloRutas {
 
     height: 4vw;
 
-    background-color: #e6d9d9;
+    background-color: #d9e1e6ba;
 }
 
 .tituloRut{
@@ -162,12 +172,12 @@ html, body {
     color: #fff;
     background: #5fc4d1;
     border-radius: 6px;
-    font-size: 2vw;
+    font-size: 1.4vw;
     font-family: oswald;
     cursor: pointer;
     transition: color 0.6s, background 0.6s;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 2vw;
+    padding-right: 16vw;
     top: 1vw;
     width: 100%;
 }
@@ -177,6 +187,16 @@ html, body {
     border: 1px solid #5fc4d1 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
+}
+
+.coonorte{
+
+    padding-right: 21.6vw;
+}
+
+.castilla263{
+
+    padding-right: 20vw;
 }
 
 
@@ -202,22 +222,26 @@ html, body {
 }
 
 .menu {
-    width: 48%;
+    width: 58%;
     margin-top: 0vw;
 }
 
 .menu ul li {
-    width: 26%;
+    width: 21%;
     float: left;
     list-style: none;
 }
 
 .menu ul li:nth-child(1) {
-    width: 13%;
+    width: 11%;
 }
 
 .menu ul li:nth-child(3) {
-    width: 23%;
+    width: 24%;
+}
+
+.menu ul li:nth-child(4) {
+    width: 19%;
 }
 
 .menu ul li a {
@@ -400,3 +424,95 @@ html, body {
 }
 
 
+/*  FOOTER    */
+
+footer{
+
+    height: auto;
+
+    top: 100vw;
+
+    position: relative;
+
+    background-color: #afafaf;
+}
+
+.redesS{
+
+    width: 100%;
+}
+
+.redesS img{
+
+    width: 2%;
+
+    margin-left: -7vw;
+
+    margin-top: 3vw;
+
+    left: -27vw;
+
+    position: relative;
+
+    bottom: 1.4vw;
+
+    cursor: pointer;
+}
+
+.redesS img:hover{
+    filter: opacity(.5);
+}
+
+.copy{height: 3vw;background-color: #5a5a5a;}
+
+.copy span{
+
+    font-size: 1.3vw;
+
+    margin-left: -55vw;
+
+    font-family: oswald;
+
+    position: relative;
+
+    top: 0.5vw;
+}
+
+
+
+
+/*#form {*/
+/*width: 250px;*/
+/*margin: 0 auto;*/
+/*height: 50px;*/
+/*}*/
+
+/*#form p {*/
+/*text-align: center;*/
+/*}*/
+
+/*#form label {*/
+/*font-size: 20px;*/
+/*}*/
+
+/*input[type="radio"] {*/
+/*display: none;*/
+/*}*/
+
+/*label {*/
+/*color: grey;*/
+/*}*/
+
+/*.clasificacion {*/
+/*direction: rtl;*/
+/*unicode-bidi: bidi-override;*/
+/*}*/
+
+/*label:hover,*/
+/*label:hover ~ label {*/
+/*color: orange;*/
+/*}*/
+
+/*input[type="radio"]:checked ~ label {*/
+/*color: orange;*/
+/*}*/
