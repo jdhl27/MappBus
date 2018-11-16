@@ -34,7 +34,7 @@
         <ul>
             <li><a href="#">INICIO</a></li>
             <li><a href="#">QUIÉNES SOMOS</a></li>
-            <li><a href="#">CONTÁCTENOS</a></li>
+            <li><a href="#contactenos">CONTÁCTENOS</a></li>
             <li><a href="/MappBus/TERMINOSYCONDICIONES.pdf" target="_blank">POLÍTICAS</a></li>
         </ul>
 
@@ -44,12 +44,18 @@
 
 <!-- BOTONES -->
 <div class="botones">
-    <div class="mapaSolo ">
+
+    <div class="tituloRutas ">
+        <h1 class="tituloContactenos">RUTAS</h1>
+
+    </div>
+
+    <div class="rutaBtn ">
         <span class=" botonRuta" onclick="initMap()">Mapa</span>
 
     </div>
 
-    <div class="ruta284Contenedor">
+    <div class="rutaBtn">
         <span class=" botonRuta" onclick="ruta284()">284</span>
 
     </div>
@@ -63,7 +69,7 @@
 
 <!-- SECCION CONTACTENOS -->
 
-<section class="Scontactenos">
+<section class="Scontactenos" >
     <div class="imgContactenos">
         <div class="ubicacion">
             <img src="imagenes/ubicacion.png" alt="">
@@ -85,7 +91,7 @@
         </div>
 
     </div>
-    <div class="formularioContactenos">
+    <div class="formularioContactenos" id="contactenos">
         <h1 class="tituloContactenos">CONTÁCTENOS</h1>
         <form class="formulario" action="contactenos.php" method="post">
             <input type="text" name="nombre" id="nombre" placeholder="Nombre" required="required">

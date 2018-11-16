@@ -1,3 +1,48 @@
+/*--------------------------- ENLACES SUAVES*/
+$(function(){
+    $('a[href*=\\#]').click(function() {
+
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+            var $target = $(this.hash);
+
+            $target = $target.length && $target || $('*[id=' + this.hash.slice(1) +']');
+
+            if ($target.length) {
+
+                var targetOffset = $target.offset().top;
+
+                jQuery('html,body').animate({scrollTop: targetOffset}, 400);
+
+            }
+        }
+    });
+});
+
+
+
+
+/*----------------------------------------------------- SCROLL MENU*/
+
+if (window.location) {
+    if ($(window).width() >=600) {
+        $(window).scroll(function(){
+
+            if($(this).scrollTop() >= 10 ){
+                $("navbar").addClass("navbarScroll")
+            } else{
+                $("navbar").removeClass("navbarScroll")
+            }
+
+        });
+    }
+}
+else{
+    $("header").addClass("headerScroll");
+}
+
+
+
 /*  INICIO MAPA EN BLANCO*/
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {

@@ -33,9 +33,9 @@
 /* MAPA     */
 #map {
     height: 80%;
-    width: 59%;
+    width: 54%;
     float: left;
-    margin-top: 10vw;
+    margin-top: 8vw;
 }
 
 html, body {
@@ -124,26 +124,52 @@ html, body {
 
 /*  BOTONES PARA LAS RUTAS  */
 .botones {
-    width: 40%;
+    width: 32%;
+    height: 25vw;
     float: left;
     position: relative;
-    margin-top: 10vw;
+    margin-left: 5vw;
+    margin-right: 4vw;
+    margin-top: 8vw;
+    border: 4px solid #c1c1c1;
+    text-shadow: 1px 1px 1px #0400ff;
+}
+
+.tituloRutas {
+
+    height: 4vw;
+
+    background-color: #e6d9d9;
+}
+
+.tituloRut{
+
+    margin-left: 2vw;
+
+    padding-bottom: 0vw !important;
+}
+
+
+.rutaBtn {
+
+    height: 4vw;
 }
 
 .botonRuta{
     position: relative;
     left:  0;
-    margin-left: 10.5vw;
+    margin-left: 0.5vw;
     color: #fff;
     background: #5fc4d1;
-    border-radius: 50px;
+    border-radius: 6px;
     font-size: 2vw;
-    height: 50% !important;
     font-family: oswald;
     cursor: pointer;
     transition: color 0.6s, background 0.6s;
-    padding-left: 4vw;
+    padding-left: 3vw;
     padding-right: 3vw;
+    top: 1vw;
+    width: 100%;
 }
 
 .botonRuta:hover{
@@ -158,7 +184,7 @@ html, body {
 /*  NAVBAR MENU  */
 .navbar {
     background-color: #afafaf;
-    height: 6vw;
+    height: 5vw;
     position: fixed !important;
     width: 100%;
     z-index: 100;
@@ -170,34 +196,35 @@ html, body {
 }
 
 .titulo h1 {
-    font-size: 6vw;
-    margin-left: 3vw;
+    font-size: 5vw;
+    margin-left: 10vw;
     cursor: default;
 }
 
 .menu {
-    width: 57%;
+    width: 48%;
     margin-top: 0vw;
 }
 
 .menu ul li {
-    width: 24%;
+    width: 26%;
     float: left;
     list-style: none;
 }
 
 .menu ul li:nth-child(1) {
-    width: 12%;
+    width: 13%;
 }
 
 .menu ul li:nth-child(3) {
-    width: 22%;
+    width: 23%;
 }
 
 .menu ul li a {
     text-decoration: none;
     font-family: oswald;
-    font-size: 1.6vw;
+    transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
+    font-size: 1.5vw;
     color: white;
 }
 
@@ -234,7 +261,7 @@ html, body {
 }
 
 .formularioContactenos{
-    width: 43%;
+    width: 30%;
     float:left;
     position: relative;
     padding-top: 4vw;
@@ -249,7 +276,7 @@ html, body {
 
 .formulario{
     position: relative;
-    width: 71%;
+    width: 102%;
 }
 .formulario>input{
     position: relative;
@@ -338,7 +365,7 @@ html, body {
     transition: color 0.6s, background 0.6s;
 }
 .btnEnviar:hover{
-    color: #5fc4d1;
+    color: #5fc4d1 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
