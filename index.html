@@ -44,51 +44,93 @@
 
 
 <!-- BOTONES -->
-<div class="botones">
+<section class="info">
+    <div class="botones">
 
-    <div class="tituloRutas ">
-        <h1 class="tituloContactenos">RUTAS</h1>
-        <!-- <input type="search" id="input-search" placeholder="Buscar..." class="buscador"> -->
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">RUTAS</h1>
+        </div>
+
+        <!--<div class="rutaBtn ">-->
+        <!--<span class=" botonRuta" onclick="initMap()">Mapa</span>-->
+
+        <!--</div>-->
+
+        <div class="rutaBtn">
+            <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 284</span>
+
+        </div>
+
+        <div class="rutaBtn">
+            <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 283</span>
+
+        </div>
+
+        <div class="rutaBtn">
+            <span class=" botonRuta" onclick="ruta288()">TRANS. MEDELLIN 288</span>
+
+        </div>
+
+        <div class="rutaBtn">
+            <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 254</span>
+
+        </div>
+
+        <div class="rutaBtn">
+            <span class=" botonRuta coonorte" onclick="ruta284()">COONORTE</span>
+
+        </div>
+
+        <div class="rutaBtn">
+            <span class=" botonRuta castilla263" onclick="ruta284()">CASTILLA 263</span>
+
+        </div>
+
 
     </div>
 
-    <!--<div class="rutaBtn ">-->
-    <!--<span class=" botonRuta" onclick="initMap()">Mapa</span>-->
+    <div class="botones info2" id="informacion284">
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">INFORMACIÓN 284</h1>
 
-    <!--</div>-->
-
-    <div class="rutaBtn">
-        <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 284</span>
-
+        </div>
+        <div class="imgInfo">
+            <img src="imagenes/faviconBus.png" alt="">
+        </div>
+        <div class="textInfo">
+            <h1>LUGARES DESTACADOS:</h1>
+            <ul>
+                <li><span onclick="sena()">SENA Pedregal</span></li>
+                <li><span onclick="itmCastilla()">ITM Castilla</span></li>
+                <li><span>Terminal De Transporte Norte</span></li>
+                <li><span>Cerro El Volador</span></li>
+                <li><span>Universidad Luis Amigo</span></li>
+                <li><span>Estadio Atanasio Girardot</span></li>
+                <li><span>Éxito Colombia</span></li>
+                <li><span>Parque San Antonio</span></li>
+                <li><span>Tecnoparques</span></li>
+                <li><span>Universidad Nacional Sede El Volador</span></li>
+                <li><span>Coca Cola</span></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="rutaBtn">
-        <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 283</span>
+    <div class="botones info2" id="informacion288">
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">INFORMACIÓN 288</h1>
+        </div>
+        <div class="imgInfo">
+            <img src="imagenes/faviconBus.png" alt="">
+        </div>
+        <div class="textInfo">
+            <h1>LUGARES DESTACADOS:</h1>
 
+        </div>
     </div>
 
-    <div class="rutaBtn">
-        <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 288</span>
-
-    </div>
-
-    <div class="rutaBtn">
-        <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 254</span>
-
-    </div>
-
-    <div class="rutaBtn">
-        <span class=" botonRuta coonorte" onclick="ruta284()">COONORTE</span>
-
-    </div>
-
-    <div class="rutaBtn">
-        <span class=" botonRuta castilla263" onclick="ruta284()">CASTILLA 263</span>
-
-    </div>
+</section>
 
 
-</div>
 <!-- MAPA -->
 
 <div id="map"></div>
@@ -177,7 +219,7 @@
 
 <!-- ENLACES -->
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbyB8tYnRbZrLoAN6liF9xOh9324pHzbU&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRFaaOB20ZDU1UdWJAqGcCJ9GRTnbBMgw&callback=initMap">
 </script>
 <script type="text/javascript" src="/MappBus/javaScript.js"></script>
 

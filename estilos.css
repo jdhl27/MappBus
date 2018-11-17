@@ -32,7 +32,7 @@
 
 /* MAPA     */
 #map {
-    height: 80%;
+    height: 100%;
     width: 54%;
     float: left;
     margin-top: 8vw;
@@ -123,8 +123,84 @@ html, body {
 
 
 /*  BOTONES PARA LAS RUTAS  */
+
+.info{
+
+    position: relative;
+
+    width: 42%;
+
+    height: auto;
+
+    float: left;
+}
+
+.info2{
+
+    margin-top: 2vw !important;
+
+    height: 15vw !important;
+
+    display: none;
+}
+
+.imgInfo{
+    width: 25%;
+    float: left;
+    margin-top: 0.5vw;
+}
+
+.imgInfo img{
+    width: 100%;
+}
+
+.textInfo{
+    width: 74%;
+    float: left;
+    margin-top: 1vw;
+}
+
+.textInfo h1{
+    font-size: 1.4vw;
+    font-family: oswaldBold;
+    color: #ff9032;
+    letter-spacing: 0.1vw;
+}
+
+.textInfo ul{
+
+    font-family: oswaldLight;
+    font-size: 1.3vw;
+}
+
+.textInfo ul>li{
+
+    list-style:circle;
+}
+
+.textInfo ul>li>span{
+
+    font-family: oswaldLight;
+
+    font-size: 1.3vw;
+
+    cursor: pointer;
+
+    color: #a2a2a200;
+}
+
+.textInfo ul>li>span:hover{
+
+    font-family: oswaldLight;
+
+    font-size: 1.3vw;
+
+    color: #ff8c33;
+}
+
+
 .botones {
-    width: 32%;
+    width: 76%;
     height: 25vw;
     float: left;
     position: relative;
@@ -141,7 +217,7 @@ html, body {
 }
 
 .botones::-webkit-scrollbar-thumb {
-    background:#5fc4d1;
+    background:#77aae6;
     border-radius:5px;
 }
 
@@ -178,6 +254,7 @@ html, body {
     transition: color 0.6s, background 0.6s;
     padding-left: 2vw;
     padding-right: 16vw;
+    padding-bottom: 0.5vw;
     top: 1vw;
     width: 100%;
 }
@@ -204,7 +281,7 @@ html, body {
 /*  NAVBAR MENU  */
 .navbar {
     background-color: #afafaf;
-    height: 5vw;
+    height: 4vw;
     position: fixed !important;
     width: 100%;
     z-index: 100;
@@ -216,9 +293,10 @@ html, body {
 }
 
 .titulo h1 {
-    font-size: 5vw;
+    font-size: 4vw;
     margin-left: 10vw;
     cursor: default;
+    padding-top: 0.6vw;
 }
 
 .menu {
@@ -227,38 +305,43 @@ html, body {
 }
 
 .menu ul li {
-    width: 21%;
+    width: 19%;
     float: left;
     list-style: none;
 }
 
 .menu ul li:nth-child(1) {
-    width: 11%;
+    width: 9%;
 }
 
 .menu ul li:nth-child(3) {
-    width: 24%;
+    width: 22%;
 }
 
 .menu ul li:nth-child(4) {
-    width: 19%;
+    width: 17%;
 }
 
 .menu ul li a {
     text-decoration: none;
     font-family: oswald;
     transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     color: white;
 }
 
 .menu ul li a:hover {
 
     color: #000;
+
     border-bottom: 1.5px solid #fff;
+
     border-top: 1.5px solid #fff;
-    padding-bottom: 5px;
-    padding-top: 6px;
+
+    padding-bottom: 1px;
+
+    padding-top: 1px;
+
     transition: color 0.6s, padding-bottom 0.6s, padding-top 0.6s;
 }
 
@@ -294,8 +377,10 @@ html, body {
 .tituloContactenos{
     /* text-shadow: 5px 6px 4px #aaa; */
     font-family: oswaldBold;
-    padding-bottom: 2.5vw;
-    font-size: 3vw;
+    font-size: 2.3vw;
+    padding-top: 0.5vw;
+    padding-bottom: 2vw;
+    text-align: center;
 }
 
 .formulario{
@@ -430,7 +515,7 @@ footer{
 
     height: auto;
 
-    top: 100vw;
+    top: 107vw;
 
     position: relative;
 
@@ -450,7 +535,7 @@ footer{
 
     margin-top: 3vw;
 
-    left: -27vw;
+    left: -27.5vw;
 
     position: relative;
 
