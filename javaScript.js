@@ -26,7 +26,7 @@ function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
         center: {lat: 6.2615713, lng: -75.5745807},
-        mapTypeId: 'terrain'
+        mapTypeId: 'roadmap'
     });
 
     map.addListener('click', function (e) {
@@ -83,7 +83,7 @@ function ruta284() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
         center: {lat: 6.2615713, lng: -75.5745807},
-        mapTypeId: 'terrain'
+        mapTypeId: 'roadmap'
     });
 
     nfoWindow = new google.maps.InfoWindow;
@@ -99,7 +99,7 @@ function ruta284() {
             infoWindow.setPosition(pos);
             infoWindow.setContent('Tu ubicación.');
             infoWindow.open(map);
-            map.setCenter(pos);
+
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -188,7 +188,7 @@ function ruta288() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
         center: {lat: 6.2615713, lng: -75.5745807},
-        mapTypeId: 'terrain'
+        mapTypeId: 'roadmap'
     });
 
     nfoWindow = new google.maps.InfoWindow;
@@ -204,7 +204,7 @@ function ruta288() {
             infoWindow.setPosition(pos);
             infoWindow.setContent('Tu ubicación.');
             infoWindow.open(map);
-            map.setCenter(pos);
+
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -294,7 +294,7 @@ function sena() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: {lat: 6.3002273, lng: -75.5688634},
-        mapTypeId: 'terrain'
+        mapTypeId: 'roadmap'
     });
 
 }
@@ -306,7 +306,7 @@ function itmCastilla() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: {lat: 6.293566, lng: -75.569044},
-        mapTypeId: 'terrain'
+        mapTypeId: 'roadmap'
     });
 
 }
