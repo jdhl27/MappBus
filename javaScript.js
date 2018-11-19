@@ -1,23 +1,41 @@
 /*--------------------------- ENLACES SUAVES*/
-// $(function () {
-//     $('a[href*=\\#]').click(function () {
+// $(function(){
 //
-//         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+//     $('a[href*=\\#]').click(function() {
+//
+//         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 //
 //             var $target = $(this.hash);
 //
-//             $target = $target.length && $target || $('*[id=' + this.hash.slice(1) + ']');
+//             $target = $target.length && $target || $('*[id=' + this.hash.slice(1) +']');
 //
 //             if ($target.length) {
 //
 //                 var targetOffset = $target.offset().top;
 //
-//                 jQuery('html,body').animate({scrollTop: targetOffset}, 400);
+//                 jQuery('html,body').animate({scrollTop: targetOffset}, 1500);
 //
 //             }
 //         }
 //     });
 // });
+
+
+//SCROLL NAV BAR
+// if ($(window).width() >=768) {$(window).scroll(function(){
+//
+//     if($(this).scrollTop() ){
+//         $('.navbar').addClass('navbarScroll');
+//     } else{
+//         $('.navbar').removeClass('navbarScroll');
+//     }
+//
+// });
+// }
+
+
+
+
 
 
 /*   MAPA SIN RUTAS ----------------------------------------------------------------------------------*/
@@ -86,7 +104,7 @@ function ruta284() {
         mapTypeId: 'roadmap'
     });
 
-    nfoWindow = new google.maps.InfoWindow;
+    infoWindow = new google.maps.InfoWindow;
 
 //  GEOLOCATION
     if (navigator.geolocation) {
@@ -191,7 +209,7 @@ function ruta288() {
         mapTypeId: 'roadmap'
     });
 
-    nfoWindow = new google.maps.InfoWindow;
+    infoWindow = new google.maps.InfoWindow;
 
 //  GEOLOCATION
     if (navigator.geolocation) {

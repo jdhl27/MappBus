@@ -11,6 +11,36 @@
 
     <title>MappBus</title>
 
+    <!-- MODAL PARA COOKIES -->
+
+    <link rel="stylesheet" type="text/css"
+          href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#237afc"
+                    },
+                    "button": {
+                        "background": "#fff",
+                        "text": "#237afc"
+                    }
+
+
+                },
+                "position": "bottom-right",
+                "content": {
+                    "message": "Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.",
+                    "dismiss": "¡Lo tengo!",
+                    "link": "Leer mas..."
+                }
+            })
+        });
+    </script>
+
+
 </head>
 <body ondragstart="return false">
 
@@ -19,25 +49,27 @@
 <label for="cerrar" id="btn-cerrar">X</label>
 <div class="modal">
     <div class="contenido">
-        <h2>Calificanos</h2>
+        <h2>¿Te gusta MappBus? Calificanos!</h2>
 
-        <form>
+        <form action="calificanos.php" method="post">
             <p class="clasificacion">
                 <input id="radio1" type="radio" name="estrellas" value="5">
-                <label onclick="vea()" for="radio1">★</label>
-                <input  id="radio2" type="radio" name="estrellas" value="4">
-                <label onclick="vea()" for="radio2">★</label>
+                <label onclick="vea()" for="radio1" title="Excelente">★</label>
+                <input id="radio2" type="radio" name="estrellas" value="4">
+                <label onclick="vea()" for="radio2" title="Bueno">★</label>
                 <input id="radio3" type="radio" name="estrellas" value="3">
-                <label onclick="vea()" for="radio3">★</label>
+                <label onclick="vea()" for="radio3" title="Regular">★</label>
                 <input id="radio4" type="radio" name="estrellas" value="2">
-                <label onclick="vea()" for="radio4">★</label>
+                <label onclick="vea()" for="radio4" title="Malo">★</label>
                 <input id="radio5" type="radio" name="estrellas" value="1">
-                <label onclick="vea()" for="radio5">★</label>
+                <label onclick="vea()" for="radio5" title="Muy Malo">★</label>
+                <input type="submit" class="btnEnviar enviarCalificacion" value="Enviar" id="btnEnviar2">
             </p>
         </form>
 
     </div>
 </div>
+
 
 <!-- TITULO Y NAVBAR -->
 <div class="navbar">
@@ -51,7 +83,7 @@
             <li><a href="#">QUIÉNES SOMOS</a></li>
             <li><a href="#">RECOMENDACIONES</a></li>
             <li><a href="#contactenos">CONTÁCTENOS</a></li>
-            <li><a href="/MappBus/TERMINOSYCONDICIONES.pdf" target="_blank">POLÍTICAS</a></li>
+            <!--<li><a href="/MappBus/TERMINOSYCONDICIONES.pdf" target="_blank">POLÍTICAS</a></li>-->
         </ul>
 
     </div>
@@ -151,6 +183,33 @@
 <div id="map"></div>
 
 
+<!-- SECCION QUIENES SOMOS -->
+
+<section class="SquienesSomos">
+    <div class="contendor">
+        <div class="contenedorImgQS">
+            <div class="imgQuinesSomos photo">
+
+                    <img src="imagenes/ruta.jpg" />
+                    <div class="glow-wrap">
+                        <i class="glow"></i>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="contenedorTextoQS">
+            <div class="textoQuienesSomos">
+                <h2>SOMOS MAPPBUS</h2>
+                <p>Nuestra compañia ofrece a los usuarios rápida información, comodidad y orientación a la hora de utilizar el
+                    transporte público de buses. el acceso a lugares en específico de forma efectiva de acuerdo con la
+                    necesidad de nuestro cliente.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
 <!-- SECCION CONTACTENOS -->
 
 <section class="Scontactenos">
@@ -190,8 +249,6 @@
 
             <input type="submit" class="btnEnviar" value="Enviar" id="btnEnviar">
         </form>
-
-
 
 
     </div>

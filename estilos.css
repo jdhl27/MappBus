@@ -36,6 +36,7 @@
     width: 54%;
     float: left;
     margin-top: 8vw;
+    border: 1px solid;
 }
 
 html, body {
@@ -45,7 +46,7 @@ html, body {
 }
 
 
-/*  MODAL VENTANA EMERGENTE   */
+/*  MODAL CALIFICACION*/
 
 .modal {
     width: 29%;
@@ -66,16 +67,17 @@ html, body {
     width: 100%;
     height: 100%;
     margin: auto;
-    background: #9e9e9eb0;
+    background: #9ea4a9;
     border-radius: 10px;
-    font-family: historia;
     /* margin-left: 33vw; */
 }
 
 .contenido h2 {
-    font-size: 4vw;
-    margin-left: 5vw;
+    font-size: 2vw;
+    margin-left: 3vw;
     margin-top: 1vw;
+    font-family: oswald;
+    width: 71%;
 }
 
 #cerrar {
@@ -119,6 +121,30 @@ html, body {
     }
 
 }
+
+.enviarCalificacion{
+
+    border-radius: 10px !important;
+
+    font-family: oswald;
+
+    letter-spacing: 2px;
+
+    position: absolute !important;
+
+    top: 11vw;
+}
+
+
+.enviarCalificacion:hover{
+
+    color: #5fc4d1 !important;
+    background: rgb(255, 255, 255) !important;
+    transition: color 0.6s, background 0.6s !important;
+
+}
+
+
 
 
 /*  BOTONES PARA LAS RUTAS  */
@@ -299,22 +325,22 @@ html, body {
 }
 
 .menu {
-    width: 58%;
+    width: 43%;
     margin-top: 0vw;
 }
 
 .menu ul li {
-    width: 19%;
+    width: 27%;
     float: left;
     list-style: none;
 }
 
 .menu ul li:nth-child(1) {
-    width: 9%;
+    width: 13%;
 }
 
 .menu ul li:nth-child(3) {
-    width: 22%;
+    width: 31%;
 }
 
 .menu ul li:nth-child(4) {
@@ -331,7 +357,7 @@ html, body {
 
 .menu ul li a:hover {
 
-    color: #000;
+    color: #0000009e;
 
     border-bottom: 1.5px solid #fff;
 
@@ -345,11 +371,177 @@ html, body {
 }
 
 
+/*    SECCION QUIENES SOMOS   */
+
+.SquienesSomos{
+
+    padding-top: 66vw;
+
+    height: 97vw;
+}
+
+.contendor{
+
+    background: #a2989838;
+
+    height: 27vw;
+}
+
+
+.contenedorImgQS{
+
+    width: 50%;
+
+    float: left;
+
+    padding-top: 4vw;
+
+    height: -webkit-fill-available;
+}
+
+.imgQuinesSomos{
+
+    width: 60%;
+
+    margin-left: 30.22vw;
+
+    margin-top: 10vw;
+
+    position: relative !important;
+}
+
+.imgQuinesSomos img{
+    width:100%;
+    border: 1px solid;
+}
+
+
+
+
+
+
+.photo{
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.photo img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: -10px;
+}
+
+.photo:hover img{
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+}
+
+.photo .glow-wrap{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+}
+
+.photo .glow{
+    display: block;
+    position:absolute;
+    width: 40%;
+    height: 200%;
+    background: rgba(255,255,255,.2);
+    top: 0;
+    filter: blur(5px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover .glow{
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo:hover img,
+.photo:hover .glow-wrap{
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+
+.contenedorTextoQS{
+
+    width: 50%;
+
+    float: left;
+
+    padding-top: 3vw;
+}
+
+.textoQuienesSomos{
+
+    width: 66%;
+
+    margin-left: 7vw;
+}
+
+.textoQuienesSomos h2{
+
+    font-size: 3vw;
+
+    font-family: oswaldBold;
+
+    width: 73%;
+
+    color: white;
+
+    background: #afafaf;
+
+    padding-left: 1vw;
+
+    border-radius: 13px;
+}
+
+.textoQuienesSomos h2:before{
+    content:"";
+    position:  absolute;
+    background-color: #5fc4d1;
+    height: 0.12vw;
+    width: 17%;
+    top: 70vw;
+    right: 0vw;
+}
+
+.textoQuienesSomos p{
+
+    text-align: justify;
+
+    font-family: oswaldLight;
+
+    font-size: 1.5vw;
+
+    width: 75%;
+
+    padding-top: 1vw;
+}
+
 /*  FORMULARIO CONTACTENOS   */
 
 .Scontactenos{
     width:100%;
-    height:auto;
+    height: 54VW;
     position: relative;
 }
 
@@ -361,13 +553,13 @@ html, body {
 }
 
 .imgContactenos img{
-    width: 10%;
-    margin-top: 1vw;
-    margin-left: 9vw;
+    width: 19%;
+    margin-top: 2vw;
+    margin-left: 2vw;
 }
 
 .formularioContactenos{
-    width: 30%;
+    width: 33%;
     float:left;
     position: relative;
     padding-top: 4vw;
@@ -392,7 +584,7 @@ html, body {
     margin-bottom: 13px;
     height: 49px;
     padding-left: 10px;
-    border: 1px solid rgba(194, 192, 222, 0.73);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 7px;
     color: #797474;
     font-family: oswald;
@@ -419,7 +611,7 @@ html, body {
     margin-bottom: 10px;
     height: 100px;
     padding-left: 6px;
-    border: 1px solid rgba(194, 192, 222, 0.73);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     margin-top: 1px;
     border-radius: 7px;
     font-family: oswald;
@@ -482,8 +674,7 @@ html, body {
 /* INFORMACION DE CONTACTO  */
 
 
-.ubicacion{
-}
+.ubicacion{width: 54%;margin-left: 13vw;background: #a7a3a361;border-radius: 22px;}
 
 .ubicacion img{
 
@@ -498,12 +689,12 @@ html, body {
 
 .ubicacion p{
     font-family: oswaldLight;
-    width: 43%;
+    width: 79%;
     position: relative;
     bottom: 3vw;
     font-size: 1.3vw;
-    padding-left: 2vw;
-    margin-left: 14.2vw;
+    padding-left: 4.6vw;
+    margin-left: 4.7vw;
     margin-top: 1vw;
 }
 
@@ -513,8 +704,6 @@ html, body {
 footer{
 
     height: auto;
-
-    top: 107vw;
 
     position: relative;
 
@@ -534,7 +723,7 @@ footer{
 
     margin-top: 3vw;
 
-    left: -27.5vw;
+    left: 66.5vw;
 
     position: relative;
 
@@ -553,7 +742,7 @@ footer{
 
     font-size: 1.3vw;
 
-    margin-left: -55vw;
+    margin-left: 39vw;
 
     font-family: oswald;
 
@@ -584,10 +773,12 @@ input[type="radio"] {
 }
 
 label {
-    color: grey;
+    color: #ffffffa6;
+    cursor: pointer;
+    height: 4vw;
 }
 
-.clasificacion {direction: rtl;unicode-bidi: bidi-override;font-size: 2.5vw;width: 51%;margin-left: 6vw;}
+.clasificacion {direction: rtl;unicode-bidi: bidi-override;font-size: 2.8vw;width: 64%;margin-left: 6vw;}
 
 label:hover,
 label:hover ~ label {
