@@ -1,24 +1,16 @@
 /*--------------------------- ENLACES SUAVES*/
-// $(function(){
-//
-//     $('a[href*=\\#]').click(function() {
-//
-//         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-//
-//             var $target = $(this.hash);
-//
-//             $target = $target.length && $target || $('*[id=' + this.hash.slice(1) +']');
-//
-//             if ($target.length) {
-//
-//                 var targetOffset = $target.offset().top;
-//
-//                 jQuery('html,body').animate({scrollTop: targetOffset}, 1500);
-//
-//             }
-//         }
-//     });
-// });
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top-$('#header').height()
+            }, 1000);
+            return false;
+        }
+    }
+});
 
 
 //SCROLL NAV BAR
