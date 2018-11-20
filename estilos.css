@@ -35,7 +35,7 @@
     height: 100%;
     width: 54%;
     float: left;
-    margin-top: 8vw;
+    margin-top: 11vw;
     border: 1px solid;
 }
 
@@ -231,7 +231,7 @@ html, body {
     position: relative;
     margin-left: 5vw;
     margin-right: 4vw;
-    margin-top: 8vw;
+    margin-top: 11vw;
     border: 4px solid #c1c1c1;
     text-shadow: 1px 1px 1px #020208;
     overflow: auto;
@@ -305,6 +305,16 @@ html, body {
 
 /*  NAVBAR MENU  */
 .navbar {
+    background-color: #afafaf00;
+    height: 6vw;
+    position: fixed !important;
+    width: 100%;
+    transition: background 0.6s, height 0.6s;
+    z-index: 100;
+    border-bottom: 1px solid #afafaf;
+}
+
+.navbarScroll {
     background-color: #afafaf;
     height: 4vw;
     position: fixed !important;
@@ -352,10 +362,58 @@ html, body {
     font-family: oswald;
     transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
     font-size: 1.4vw;
-    color: white;
+    color: #383737;
 }
 
 .menu ul li a:hover {
+
+    color: #8882829e;
+
+    border-bottom: 1.5px solid #4e4c4c;
+
+    border-top: 1.5px solid #4e4c4c;
+
+    padding-bottom: 1px;
+
+    padding-top: 1px;
+
+    transition: color 0.6s, padding-bottom 0.6s, padding-top 0.6s;
+}
+
+
+
+.menuScroll {
+    width: 43%;
+    margin-top: 0vw;
+}
+
+.menuScroll ul li {
+    width: 27%;
+    float: left;
+    list-style: none;
+}
+
+.menuScroll ul li:nth-child(1) {
+    width: 13%;
+}
+
+.menuScroll ul li:nth-child(3) {
+    width: 31%;
+}
+
+.menuScroll ul li:nth-child(4) {
+    width: 17%;
+}
+
+.menuScroll ul li a {
+    text-decoration: none;
+    font-family: oswald;
+    transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
+    font-size: 1.4vw;
+    color: white;
+}
+
+.menuScroll ul li a:hover {
 
     color: #0000009e;
 
@@ -370,14 +428,24 @@ html, body {
     transition: color 0.6s, padding-bottom 0.6s, padding-top 0.6s;
 }
 
-
 /*    SECCION QUIENES SOMOS   */
 
 .SquienesSomos{
 
-    padding-top: 66vw;
+    padding-top: 71vw;
 
-    height: 97vw;
+    height: 104vw;
+}
+
+.qsScroll{
+
+    position: absolute;
+
+    width: 100%;
+
+    top: 60vw;
+
+    height: 5vw;
 }
 
 .contendor{
@@ -520,7 +588,7 @@ html, body {
     background-color: #5fc4d1;
     height: 0.12vw;
     width: 17%;
-    top: 70vw;
+    top: 76vw;
     right: 0vw;
 }
 

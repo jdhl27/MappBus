@@ -79,8 +79,8 @@
 
     <div class="menu">
         <ul>
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">QUIÉNES SOMOS</a></li>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#quienesSomos">QUIÉNES SOMOS</a></li>
             <li><a href="#">RECOMENDACIONES</a></li>
             <li><a href="#contactenos">CONTÁCTENOS</a></li>
             <!--<li><a href="/MappBus/TERMINOSYCONDICIONES.pdf" target="_blank">POLÍTICAS</a></li>-->
@@ -91,7 +91,7 @@
 
 
 <!-- BOTONES -->
-<section class="info">
+<section class="info" id="inicio">
     <div class="botones">
 
         <div class="tituloRutas ">
@@ -109,7 +109,7 @@
         </div>
 
         <div class="rutaBtn">
-            <span class=" botonRuta" onclick="ruta284()">TRANS. MEDELLIN 283</span>
+            <span class=" botonRuta" onclick="ruta283()">TRANS. MEDELLIN 283</span>
 
         </div>
 
@@ -162,6 +162,23 @@
         </div>
     </div>
 
+
+
+    <div class="botones info2" id="informacion283">
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">INFORMACIÓN 283</h1>
+        </div>
+        <div class="imgInfo">
+            <img src="imagenes/faviconBus.png" alt="">
+        </div>
+        <div class="textInfo">
+            <h1>LUGARES DESTACADOS:</h1>
+
+        </div>
+    </div>
+
+
+
     <div class="botones info2" id="informacion288">
         <div class="tituloRutas ">
             <h1 class="tituloContactenos">INFORMACIÓN 288</h1>
@@ -186,7 +203,8 @@
 <!-- SECCION QUIENES SOMOS -->
 
 <section class="SquienesSomos">
-    <div class="contendor">
+    <div id="quienesSomos" class="qsScroll"></div>
+    <div class="contendor" >
         <div class="contenedorImgQS">
             <div class="imgQuinesSomos photo">
 
@@ -283,20 +301,12 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRFaaOB20ZDU1UdWJAqGcCJ9GRTnbBMgw&callback=initMap">
 </script>
 
-<script type="text/javascript" src="/MappBus/Jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script type="text/javascript" src="/MappBus/javaScript.js"></script>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+
 
 
 </body>
