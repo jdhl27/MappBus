@@ -19,7 +19,7 @@ $email_content .= "Mensaje:\n$mensaje<br>\n";
 $email_headers = "MIME-Version: 1.0" . "\r\n";
 $email_headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
 $email_headers .= "From: $email" . "\r\n" .
-    "Reply-To: servicioalcliente@oasismedicinadelbienestar.com" . "\r\n" .
+    "Reply-To: servicioalcliente@mappbus.com" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 
 if (mail($recipient, $subject, $email_content, $email_headers)){

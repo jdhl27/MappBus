@@ -1,9 +1,9 @@
 <?php
-$extrella1 = utf8_decode($_POST['radio5']);
-$extrella2 = utf8_decode($_POST["radio4"]);
-$extrella3 = utf8_decode($_POST["radio3"]);
-$extrella4 = utf8_decode($_POST['radio2']);
-$extrella5 = utf8_decode($_POST['radio1']);
+$extrella1 = 'radio5';
+$extrella2 = 'radio4';
+$extrella3 = 'radio3';
+$extrella4 = 'radio2';
+$extrella5 = 'radio1';
 
 
 
@@ -19,10 +19,10 @@ $email_content .= "Extrella 5:$radio1<br>\n";
 $email_headers = "MIME-Version: 1.0" . "\r\n";
 $email_headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
 $email_headers .= "From: $email" . "\r\n" .
-    "Reply-To: servicioalcliente@oasismedicinadelbienestar.com" . "\r\n" .
+    "Reply-To: servicioalcliente@mappbus.com" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 
-if (mail($recipient, $subject, $email_headers)){
+if (mail($recipient, $subject,$email_content ,$email_headers)){
     alert('Gracias por calificarnos!');
 }
 else{
