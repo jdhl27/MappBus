@@ -2,6 +2,964 @@
 @media (max-width: 575.98px) {
 
 
+
+
+    /*  FUENTES  */
+
+    @font-face {
+        font-family: titulo;
+        src: url(fuentes/FinishedSympathy.otf);
+    }
+
+    @font-face {
+        font-family: subtitulo;
+        src: url(fuentes/Splendor-PersonalUse.ttf);
+    }
+
+    @font-face {
+        font-family: historia;
+        src: url(fuentes/TheHistoriaDemo.ttf);
+    }
+
+    @font-face {
+        font-family: oswald;
+        src: url(fuentes/Oswald-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: oswaldBold;
+        src: url(fuentes/Oswald-SemiBold.ttf);
+    }
+
+    @font-face {
+        font-family: oswaldLight;
+        src: url(fuentes/Oswald-Light.ttf);
+    }
+
+    /* MAPA     */
+    #map {
+        height: 100%;
+        width: 101%;
+        float: none !important;
+        border: 1px solid #03A9F4;
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /*  MODAL CALIFICACION*/
+
+    .modal {
+        width: 46%;
+        height: 20vh;
+        background: rgba(0, 0, 0, 0);
+        position: fixed !important;
+        z-index: 1000 !important;
+        top: 15vw !important;
+        left: 54vw!important;
+        display: flex !important;
+        animation: modal 4s 10s;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .contenido {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        background: #9ea4a9;
+        border-radius: 10px;
+        /* margin-left: 33vw; */
+    }
+
+    .contenido h2 {
+        font-size: 4.3vw;
+        margin-left: 3vw;
+        margin-top: 1vw;
+        font-family: oswald;
+        width: 71%;
+    }
+
+    #cerrar {
+        display: none;
+    }
+
+
+
+    #cerrar + label {
+        position: fixed;
+        color: white;
+        font-size: 5.8vw;
+        z-index: 10000;
+        background: darkred;
+        height: 33px;
+        width: 34px;
+        line-height: 31px;
+        border-radius: 50%;
+        right: 10px;
+        cursor: pointer;
+        animation: modal 4s 10s;
+        animation-fill-mode: forwards;
+        visibility: hidden;
+        opacity: 0;
+        text-align: center;
+        left: 91vw;
+        top: 16vw;
+    }
+
+
+
+    #cerrar:checked + label, #cerrar:checked ~ .modal {
+        display: none !important;
+    }
+
+    @keyframes modal {
+        100% {
+            visibility: visible;
+            opacity: 1;
+
+        }
+
+    }
+
+    .enviarCalificacion{
+
+        border-radius: 10px !important;
+
+        font-family: oswald;
+
+        letter-spacing: 2px;
+
+        position: absolute !important;
+
+        top: 24vw;
+
+        font-size: 4vw !important;
+
+        margin-left: 27vw !important;
+
+    }
+
+
+    .enviarCalificacion:hover{
+
+        color: #5fc4d1 !important;
+        background: rgb(255, 255, 255) !important;
+        transition: color 0.6s, background 0.6s !important;
+
+    }
+
+
+
+
+    /*  BOTONES PARA LAS RUTAS  */
+
+    .info{
+
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        /* float: left; */
+
+        padding-bottom: 16vw;
+
+    }
+
+    .info2{
+
+        margin-top: 9vw !important;
+
+        height: 64vw !important;
+
+        display: none;
+
+    }
+
+    .imgInfo{
+        width: 29%;
+        float: left;
+        margin-top: 0.5vw;
+    }
+
+    .imgInfo img{
+        width: 100%;
+    }
+
+    .textInfo{
+        width: 70%;
+        float: left;
+        margin-top: 1vw;
+    }
+
+    .textInfo h1{
+        font-size: 4.4vw;
+        font-family: oswaldBold;
+        color: #ff9032;
+        letter-spacing: 0.1vw;
+    }
+
+    .textInfo ul{
+
+        font-family: oswaldLight;
+
+        font-size: 4.3vw;
+
+        margin-left: -7vw;
+
+    }
+
+    .textInfo ul>li{
+
+        list-style:circle;
+    }
+
+    .textInfo ul>li>span{
+
+        font-family: oswaldLight;
+
+        font-size: 5.3vw;
+
+        cursor: pointer;
+
+        color: #a2a2a200;
+
+    }
+
+    .textInfo ul>li>span:hover{
+
+        font-family: oswaldLight;
+
+        font-size: 1.3vw;
+
+        color: #ff8c33;
+    }
+
+
+    .botones {
+        width: 92%;
+        height: 54vw;
+        float: left;
+        position: relative;
+        margin-left: 5vw;
+        margin-right: 4vw;
+        margin-top: 19vw;
+        border: 4px solid #c1c1c1;
+        text-shadow: 1px 1px 1px #020208;
+        overflow: auto;
+        box-shadow: -10px 5px 12px #999;
+    }
+    .botones::-webkit-scrollbar{
+        width:6px;
+    }
+
+    .botones::-webkit-scrollbar-thumb {
+        background:#77aae6;
+        border-radius:5px;
+    }
+
+    .tituloRutas {
+
+        height: 10vw;
+
+        background-color: #d9e1e6ba;
+
+    }
+
+    .tituloRut{
+
+        margin-left: 2vw;
+
+        padding-bottom: 0vw !important;
+    }
+
+
+    .rutaBtn {
+
+        height: 9vw;
+
+    }
+
+    .botonRuta{
+        position: relative;
+        left:  0;
+        margin-left: 0.5vw;
+        color: #fff;
+        background: #5fc4d1;
+        border-radius: 6px;
+        font-size: 4.4vw;
+        font-family: oswald;
+        cursor: pointer;
+        transition: color 0.6s, background 0.6s;
+        padding-left: 2vw;
+        padding-right: 48.5vw;
+        padding-bottom: 0.5vw;
+        top: 1vw;
+        width: 100%;
+    }
+
+    .botonRuta:hover{
+        color: #5fc4d1;
+        border: 1px solid #5fc4d1 !important;
+        background: rgba(96, 96, 96, 0.1);
+        transition: color 0.6s, background 0.6s;
+    }
+
+    .coonorte{
+
+        padding-right: 66.6vw;
+
+    }
+
+    .castilla263{
+
+        padding-right: 61vw;
+
+    }
+
+
+
+    /*  NAVBAR MENU  */
+
+
+
+    /*        MENU HAMBUEGR   */
+
+    .hamburger {
+        min-height: 30px;
+        max-width: 50px;
+        display: block;
+        margin-left: 84vw;
+        position: absolute;
+    }
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+        background-color: white;
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        border-radius: 5px;
+        content: '';
+        transition-timing-function: ease;
+        transition-duration: .2s;
+        transition-property: transform,opacity;
+    }
+    .hamburger-inner:before {
+        top: 10px;
+    }
+    .hamburger-inner:after {
+        top: 20px;
+    }
+
+
+    .hamburger.open .hamburger-inner {
+        transform: translate3d(0,10px,0) rotate(45deg);
+    }
+    .hamburger.open .hamburger-inner:after {
+        transform: translate3d(0,-20px,0) rotate(-90deg);
+    }
+    .hamburger.open .hamburger-inner:before {
+        transform: translate3d(0,-11px,0) rotate(89deg);
+    }
+
+
+
+    .navbar {
+        background-color: #afafaf;
+        height: 12vw;
+        position: fixed !important;
+        width: 100%;
+        transition: background 0.6s, height 0.6s;
+        z-index: 100;
+        border-bottom: 1px solid #afafaf;
+    }
+
+    .navbarScroll {
+        background-color: #afafaf;
+        height: 12vw;
+        position: fixed !important;
+        width: 100%;
+        z-index: 100;
+    }
+
+    .titulo {
+        font-family: titulo;
+        width: 30%;
+    }
+
+    .titulo h1 {
+        font-size: 12vw;
+        margin-left: -1vw;
+        cursor: default;
+        padding-top: 2.6vw;
+    }
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        margin-top: 23vw;
+        display: block;
+        margin-left: -4vw;
+        left: 104vw;
+        transition: left 0.5s;
+        background-color: #afafaf;
+    }
+
+    .menu ul li {
+        width: 100%;
+        float: left;
+        list-style: none;
+        border-bottom: 2px solid;
+    }
+
+    .menu ul li:nth-child(1) {
+        width: 100%;
+        border-bottom: 2px solid;
+    }
+
+    .menu ul li:nth-child(3) {
+        width: 100%;
+    }
+
+    .menu ul li:nth-child(4) {
+        width: 100%;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        font-family: oswald;
+        transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
+        font-size: 5.4vw;
+        color: #ffffff;
+    }
+
+    .menu ul li a:hover {
+
+        color: #0000009e;
+
+        border-bottom: none;
+
+        border-top: none;
+
+        padding-bottom: 1px;
+
+        padding-top: 1px;
+
+        transition: color 0.6s, padding-bottom 0.6s, padding-top 0.6s;
+
+    }
+
+
+
+    .menuScroll {
+        width: 43%;
+        margin-top: 0vw;
+    }
+
+    .menuScroll ul li {
+        width: 27%;
+        float: left;
+        list-style: none;
+    }
+
+    .menuScroll ul li:nth-child(1) {
+        width: 13%;
+    }
+
+    .menuScroll ul li:nth-child(3) {
+        width: 31%;
+    }
+
+    .menuScroll ul li:nth-child(4) {
+        width: 17%;
+    }
+
+    .menuScroll ul li a {
+        text-decoration: none;
+        font-family: oswald;
+        transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
+        font-size: 1.4vw;
+        color: white;
+    }
+
+    .menuScroll ul li a:hover {
+
+        color: #0000009e;
+
+        border-bottom: 1.5px solid #fff;
+
+        border-top: 1.5px solid #fff;
+
+        padding-bottom: 1px;
+
+        padding-top: 1px;
+
+        transition: color 0.6s, padding-bottom 0.6s, padding-top 0.6s;
+    }
+
+    /*    SECCION QUIENES SOMOS   */
+
+    .SquienesSomos{
+
+        padding-top: 49vw;
+
+        height: 181vw;
+
+    }
+
+    .qsScroll{
+
+        position: absolute;
+
+        width: 100%;
+
+        top: 363vw;
+
+        height: 5vw;
+
+    }
+
+    .contendor{
+
+        background: #a2989838;
+
+        height: 132vw;
+
+    }
+
+
+    .contenedorImgQS{
+
+        width: 100%;
+
+        float: left;
+
+        height: 59vw !important;
+
+        padding-top: 4vw;
+
+        height: -webkit-fill-available;
+
+    }
+
+    .imgQuinesSomos{
+
+        width: 85%;
+
+        margin-left: 52.22vw;
+
+        margin-top: 10vw;
+
+        position: relative !important;
+
+    }
+
+    .imgQuinesSomos img{
+        width:100%;
+        border: 1px solid;
+    }
+
+
+
+
+
+
+    .photo{
+        position: absolute;
+        /* top: 50%; */
+        /* left: 50%; */
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+
+    .photo img{
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        filter: grayscale(100%) contrast(120%);
+        box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+        display: block;
+        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        margin-top: -10px;
+    }
+
+    .photo:hover img{
+        box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+    }
+
+    .photo .glow-wrap{
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        margin-top: -10px;
+    }
+
+    .photo .glow{
+        display: block;
+        position:absolute;
+        width: 40%;
+        height: 200%;
+        background: rgba(255,255,255,.2);
+        top: 0;
+        filter: blur(5px);
+        transform: rotate(45deg) translate(-450%, 0);
+        transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .photo:hover .glow{
+        transform: rotate(45deg) translate(450%, 0);
+        transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .photo:hover img,
+    .photo:hover .glow-wrap{
+        margin-top: 0;
+    }
+
+
+
+
+
+
+
+
+    .contenedorTextoQS{
+
+        width: 100%;
+
+        float: left;
+
+        padding-top: 3vw;
+
+    }
+
+    .textoQuienesSomos{
+
+        width: 84%;
+
+        margin-left: 10vw;
+
+    }
+
+    .textoQuienesSomos h2{
+
+        font-size: 8vw;
+
+        font-family: oswaldBold;
+
+        width: 81%;
+
+        color: white;
+
+        background: #afafaf;
+
+        padding-left: 6vw;
+
+        border-radius: 13px;
+
+    }
+
+    .textoQuienesSomos h2:before{
+        content:"";
+        position:  absolute;
+        background-color: #5fc4d1;
+        height: 0.6vw;
+        width: 20%;
+        top: 382vw;
+        right: 0vw;
+    }
+
+    .textoQuienesSomos p{
+
+        text-align: justify;
+
+        font-family: oswaldLight;
+
+        font-size: 4.5vw;
+
+        width: 75%;
+
+        padding-top: 1vw;
+
+    }
+
+    /*  FORMULARIO CONTACTENOS   */
+
+    .Scontactenos{
+        width:100%;
+        height: 288VW;
+        position: relative;
+    }
+
+    .imgContactenos{
+        width: 100%;
+        float:left;
+        position: relative;
+        padding-top: 9vw;
+    }
+
+    .imgContactenos img{
+        width: 19%;
+        margin-top: 2vw;
+        margin-left: 8vw;
+    }
+
+    .formularioContactenos{
+        width: 80%;
+        float:left;
+        position: relative;
+        padding-top: 4vw;
+        margin-left: 11vw;
+    }
+
+    .formularioContactenos p{
+
+        font-family: oswaldLight;
+
+        font-size: 4.6vw;
+
+    }
+
+    .tituloContactenos{
+        /* text-shadow: 5px 6px 4px #aaa; */
+        font-family: oswaldBold;
+        font-size: 6.3vw;
+        padding-top: 0.5vw;
+        padding-bottom: 2vw;
+        text-align: center;
+    }
+
+    .formulario{
+        position: relative;
+        width: 102%;
+    }
+    .formulario>input{
+        position: relative;
+        width: 100%;
+        margin-bottom: 13px;
+        height: 49px;
+        padding-left: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 7px;
+        color: #797474;
+        font-family: oswald;
+    }
+    .formulario input::placeholder{
+        position: relative;
+        width: 100%;
+        margin-bottom: 13px;
+        color: rgba(96, 96, 96, 0.5);
+        font-family: "Raleway Regular";
+        font-size: 15px;
+    }
+    .formulario label{
+        position: relative;
+        font-family: oswald;
+        color: #5fc4d1 !important;
+        font-size: 4vw;
+        top: -5.4vw;
+        margin-bottom: 10px;
+    }
+    .formulario textarea{
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 100px;
+        padding-left: 6px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        margin-top: 1px;
+        border-radius: 7px;
+        font-family: oswald;
+        color: #797474;
+    }
+    .formulario div span{
+        position: relative;
+        width: 100%;
+        font-family: "Raleway Regular";
+        padding-left: 5px;
+        color: #606060;
+    }
+    .h1LineaAbajoContactenos::before{
+        content: "";
+        background-color: #5fc4d1;
+        width: 59px;
+        height: 3px;
+        border-radius: 44px;
+        position: absolute;
+        top: 49px;
+        left: 0%;
+    }
+    .Autorizacion{
+        position: relative;
+        width: 4% !important;
+    }
+    .btnEnviar{
+
+        position: relative;
+
+        margin-left: 26.5vw;
+
+        color: #fff !important;
+
+        background: #5fc4d1;
+
+        width: 33% !important;
+
+        border:  none !important;
+
+        border-radius: 50px;
+
+        font-size: 20px;
+
+        height: 40px !important;
+
+        cursor: pointer;
+
+        transition: color 0.6s, background 0.6s;
+
+    }
+    .btnEnviar:hover{
+        color: #5fc4d1 !important;
+        background: rgba(96, 96, 96, 0.1);
+        transition: color 0.6s, background 0.6s;
+    }
+
+
+    /* INFORMACION DE CONTACTO  */
+
+
+    .ubicacion{width: 82%;margin-left: 10vw;background: #a7a3a361;border-radius: 22px;}
+
+    .ubicacion img{
+
+    }
+
+    .ubicacion span{
+        font-family: oswaldBold;
+        font-size: 5.7vw;
+        margin-top: 3vw;
+        padding-left: 2vw;
+    }
+
+    .ubicacion p{
+        font-family: oswaldLight;
+        width: 84%;
+        position: relative;
+        bottom: 6vw;
+        font-size: 4.3vw;
+        padding-left: 4.6vw;
+        margin-left: 20.7vw;
+        margin-top: 1vw;
+    }
+
+
+    /*  FOOTER    */
+
+    footer{
+
+        height: auto;
+
+        position: relative;
+
+        background-color: #afafaf;
+    }
+
+    .redesS{
+
+        width: 100%;
+
+        height: 22vw;
+
+    }
+
+    .redesS a img{
+
+        width: 10%;
+
+        margin-left: -27vw;
+
+        margin-top: 8vw;
+
+        left: 104.5vw;
+
+        position: relative;
+
+        bottom: 1.4vw;
+
+        cursor: pointer;
+
+    }
+
+    .redesS img:hover{
+        filter: opacity(.5);
+    }
+
+    .copy{height: 16vw;background-color: #5a5a5a;}
+
+    .copy span{
+
+        font-size: 5vw;
+
+        margin-left: 2vw !important;
+
+        font-family: oswald;
+
+        position: relative;
+
+        top: 3vw !important;
+
+    }
+
+
+
+
+    #form {
+        width: 250px;
+        margin: 0 auto;
+        height: 50px;
+    }
+
+    #form p {
+        text-align: center;
+    }
+
+    #form label {
+        font-size: 20px;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        color: #ffffffa6;
+        cursor: pointer;
+        height: 4vw;
+    }
+
+    .clasificacion {direction: rtl;unicode-bidi: bidi-override;font-size: 6.8vw;width: 78%;margin-left: 3vw;}
+
+    label:hover,
+    label:hover ~ label {
+        color: orange;
+    }
+
+    input[type="radio"]:checked ~ label {
+        color: orange;
+    }
+
+
+
+
+
 }
 
 

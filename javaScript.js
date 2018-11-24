@@ -23,31 +23,62 @@ $(function () {
 
 
 //-------------------------------------SCROLL NAV BAR
+$(document).ready(function () {
 
-if ($(window).width() >= 768) {
-    $(window).scroll(function () {
+    if ($(window).width() >= 768) {
+        $(window).scroll(function () {
 
-        if ($(this).scrollTop()) {
-            $('.navbar').addClass('navbarScroll');
-        } else {
-            $('.navbar').removeClass('navbarScroll');
-        }
+            if ($(this).scrollTop()) {
+                $('.navbar').addClass('navbarScroll');
+            } else {
+                $('.navbar').removeClass('navbarScroll');
+            }
 
-    });
-}
+        });
+    }
 
 
-if ($(window).width() >= 768) {
-    $(window).scroll(function () {
+    if ($(window).width() >= 768) {
+        $(window).scroll(function () {
 
-        if ($(this).scrollTop()) {
-            $('.menu').addClass('menuScroll');
-        } else {
-            $('.menu').removeClass('menuScroll');
-        }
+            if ($(this).scrollTop()) {
+                $('.menu').addClass('menuScroll');
+            } else {
+                $('.menu').removeClass('menuScroll');
+            }
 
-    });
-}
+        });
+    }
+
+
+});
+
+
+/*   MENU HAMBURGUESA                       -------------------------------------------------------*/
+
+
+
+$('.hamburger').click(function () {
+    $('.hamburger').toggleClass('open');
+
+
+});
+
+
+var desplegado = false;
+$('.hamburger').click(function(){
+    if (desplegado==false) {
+        $('.menu').css("left","4vw");
+
+        desplegado = true;
+    }
+    else{
+
+        $('.menu').css("left","104vw");
+
+        desplegado = false;
+    }
+});
 
 
 /*   MAPA SIN RUTAS ----------------------------------------------------------------------------------*/
