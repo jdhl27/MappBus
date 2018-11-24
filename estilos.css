@@ -122,6 +122,47 @@ html, body {
 
 }
 
+
+
+
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+#form p {
+    text-align: center;
+}
+
+#form label {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    color: #ffffffa6;
+    cursor: pointer;
+    height: 4vw;
+}
+
+.clasificacion {direction: rtl;unicode-bidi: bidi-override;font-size: 2.8vw;width: 64%;margin-left: 6vw;}
+
+label:hover,
+label:hover ~ label {
+    color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+    color: orange;
+}
+
+
+
+
 .enviarCalificacion{
 
     border-radius: 10px !important;
