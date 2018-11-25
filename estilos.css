@@ -911,3 +911,41 @@ label:hover ~ label {
 input[type="radio"]:checked ~ label {
     color: orange;
 }
+
+
+
+
+/*    PAGINA RECOMENDACIONES   */
+
+
+.btnRestaurantes{
+
+    padding-right: 19vw;
+}
+
+.btnBares{
+    padding-right: 23.5vw;
+}
+
+.btnHoteles{
+    padding-right: 22.4vw;
+}
+
+.btnDiscotecas{
+    padding-right: 20.5vw;
+}
+
+.btnSuper{
+
+    padding-right: 17.4vw;
+}
+
+.btnHeladerias{
+
+    padding-right: 20.5vw;
+}
+
+.btnCarnicerias{
+
+    padding-right: 20vw;
+}

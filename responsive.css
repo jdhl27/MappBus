@@ -59,7 +59,7 @@
         background: rgba(0, 0, 0, 0);
         position: fixed !important;
         z-index: 1000 !important;
-        top: 15vw !important;
+        top: 31vw !important;
         left: 54vw!important;
         display: flex !important;
         animation: modal 4s 10s;
@@ -109,7 +109,7 @@
         opacity: 0;
         text-align: center;
         left: 91vw;
-        top: 16vw;
+        top: 32vw;
     }
 
 

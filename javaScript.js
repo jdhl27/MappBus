@@ -2843,3 +2843,26 @@ function uniNacionalVolador() {
 
 
 
+
+
+
+
+
+/*------------------------------------------------------------------------------- LUGARES FAVORITOS-------*/
+
+
+function restaurantes() {
+    $("#restaurantes").css("display", "block");
+    $("#informacion288").css("display", "none");
+    $("#informacion283").css("display", "none");
+
+}
+
+
+
+
+
+
+
+
+
