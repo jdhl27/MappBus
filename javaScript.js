@@ -2855,6 +2855,152 @@ function restaurantes() {
     $("#hoteles").css("display", "none");
     $("#discotecas").css("display", "none");
 
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: 6.2615713, lng: -75.5745807},
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+                featureType: 'administrative.locality',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'geometry',
+                stylers: [{color: '#263c3f'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#6b9a76'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#38414e'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#212a37'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#746855'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#1f2835'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#f3d19c'}]
+            },
+            {
+                featureType: 'transit',
+                elementType: 'geometry',
+                stylers: [{color: '#2f3948'}]
+            },
+            {
+                featureType: 'transit.station',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#17263c'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#515c6d'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#17263c'}]
+            }
+        ]
+    });
+
+
+    infoWindow = new google.maps.InfoWindow;
+
+
+//  GEOLOCATION
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            var contentString = 'Mi Ubicación';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: 'Mi ubicación',
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+
+            });
+            marker.addListener('click', toggleBounce);
+
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                    infowindow.open(map, marker);
+
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+        // NAVEGADOR NO SOPORTA GEOLOCALIZACION
+    } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: El servicio de geolocalización falló.' :
+            'Error: Tu navegador no admite la geolocalización');
+        infoWindow.open(map);
+    }
+
+
+
 }
 
 
@@ -3007,7 +3153,7 @@ function restaurante1(){
 
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -3163,7 +3309,7 @@ function restaurante2(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -3320,7 +3466,7 @@ function restaurante3(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -3476,7 +3622,7 @@ function restaurante4(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -3636,7 +3782,7 @@ function restaurante5(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -3793,7 +3939,7 @@ function restaurante6(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -3814,6 +3960,154 @@ function bares() {
     $("#bares").css("display", "block");
     $("#hoteles").css("display", "none");
     $("#discotecas").css("display", "none");
+
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: 6.2615713, lng: -75.5745807},
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+                featureType: 'administrative.locality',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'geometry',
+                stylers: [{color: '#263c3f'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#6b9a76'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#38414e'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#212a37'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#746855'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#1f2835'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#f3d19c'}]
+            },
+            {
+                featureType: 'transit',
+                elementType: 'geometry',
+                stylers: [{color: '#2f3948'}]
+            },
+            {
+                featureType: 'transit.station',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#17263c'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#515c6d'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#17263c'}]
+            }
+        ]
+    });
+
+
+    infoWindow = new google.maps.InfoWindow;
+
+
+//  GEOLOCATION
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            var contentString = 'Mi Ubicación';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: 'Mi ubicación',
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+
+            });
+            marker.addListener('click', toggleBounce);
+
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                    infowindow.open(map, marker);
+
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+        // NAVEGADOR NO SOPORTA GEOLOCALIZACION
+    } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: El servicio de geolocalización falló.' :
+            'Error: Tu navegador no admite la geolocalización');
+        infoWindow.open(map);
+    }
+
+
+
+
 
 }
 
@@ -3962,7 +4256,7 @@ function bar1(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/bar.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4115,7 +4409,7 @@ function bar2(){
 
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/bar.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4271,7 +4565,7 @@ function bar3(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/bar.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4427,7 +4721,7 @@ function bar4(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/bar.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4583,7 +4877,7 @@ function bar5(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/bar.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4740,7 +5034,7 @@ function bar6(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/bar.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4760,6 +5054,158 @@ function hoteles() {
     $("#bares").css("display", "none");
     $("#hoteles").css("display", "block");
     $("#discotecas").css("display", "none");
+
+
+
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: 6.2615713, lng: -75.5745807},
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+                featureType: 'administrative.locality',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'geometry',
+                stylers: [{color: '#263c3f'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#6b9a76'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#38414e'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#212a37'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#746855'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#1f2835'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#f3d19c'}]
+            },
+            {
+                featureType: 'transit',
+                elementType: 'geometry',
+                stylers: [{color: '#2f3948'}]
+            },
+            {
+                featureType: 'transit.station',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#17263c'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#515c6d'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#17263c'}]
+            }
+        ]
+    });
+
+
+    infoWindow = new google.maps.InfoWindow;
+
+
+//  GEOLOCATION
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            var contentString = 'Mi Ubicación';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: 'Mi ubicación',
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+
+            });
+            marker.addListener('click', toggleBounce);
+
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                    infowindow.open(map, marker);
+
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+        // NAVEGADOR NO SOPORTA GEOLOCALIZACION
+    } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: El servicio de geolocalización falló.' :
+            'Error: Tu navegador no admite la geolocalización');
+        infoWindow.open(map);
+    }
+
+
+
+
+
+
 
 }
 
@@ -5681,7 +6127,7 @@ function hotel6(){
     }
 
 
-    var image = 'https://cdn2.iconfinder.com/data/icons/food-183/95/Eat_Food_Gourmet_Kitchen_Meal_Restaurant-56-512.png';
+    var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -5702,6 +6148,153 @@ function discotecas() {
     $("#bares").css("display", "none");
     $("#hoteles").css("display", "none");
     $("#discotecas").css("display", "block");
+
+
+
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: {lat: 6.2615713, lng: -75.5745807},
+        styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+                featureType: 'administrative.locality',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'geometry',
+                stylers: [{color: '#263c3f'}]
+            },
+            {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#6b9a76'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#38414e'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#212a37'}]
+            },
+            {
+                featureType: 'road',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#9ca5b3'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#746855'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#1f2835'}]
+            },
+            {
+                featureType: 'road.highway',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#f3d19c'}]
+            },
+            {
+                featureType: 'transit',
+                elementType: 'geometry',
+                stylers: [{color: '#2f3948'}]
+            },
+            {
+                featureType: 'transit.station',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#d59563'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'geometry',
+                stylers: [{color: '#17263c'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#515c6d'}]
+            },
+            {
+                featureType: 'water',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#17263c'}]
+            }
+        ]
+    });
+
+
+    infoWindow = new google.maps.InfoWindow;
+
+
+//  GEOLOCATION
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+
+            var contentString = 'Mi Ubicación';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: 'Mi ubicación',
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+
+            });
+            marker.addListener('click', toggleBounce);
+
+
+            function toggleBounce() {
+                if (marker.getAnimation() !== null) {
+                    marker.setAnimation(null);
+                    infowindow.open(map, marker);
+
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
+            map.setCenter(pos);
+        }, function () {
+            handleLocationError(true, infoWindow, map.getCenter());
+        });
+        // NAVEGADOR NO SOPORTA GEOLOCALIZACION
+    } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: El servicio de geolocalización falló.' :
+            'Error: Tu navegador no admite la geolocalización');
+        infoWindow.open(map);
+    }
+
+
 
 }
 
