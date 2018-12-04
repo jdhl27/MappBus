@@ -205,7 +205,7 @@ input[type="radio"]:checked ~ label {
 
     margin-top: 2vw !important;
 
-    height: 15vw !important;
+    height: 21vw !important;
 
     display: none;
 }
@@ -528,7 +528,7 @@ input[type="radio"]:checked ~ label {
 
 .imgQuinesSomos img{
     width:100%;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 
@@ -628,6 +628,8 @@ input[type="radio"]:checked ~ label {
     padding-left: 1vw;
 
     border-radius: 13px;
+
+    text-shadow: 8px 1px 47px #1568ff;
 }
 
 .textoQuienesSomos h2:before{
