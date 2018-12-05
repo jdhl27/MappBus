@@ -3007,12 +3007,17 @@ function restaurantes() {
 
 function restaurante1(){
 
-
+    $("#restaurante1").css("display", "block");
+    $("#restaurante2").css("display", "none");
+    $("#restaurante3").css("display", "none");
+    $("#restaurante4").css("display", "none");
+    $("#restaurante5").css("display", "none");
+    $("#restaurante6").css("display", "none");
 
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
-        center: {lat: 6.262831, lng:  -75.579330},
+        center: {lat: 6.223922, lng:  -75.606627},
         // mapTypeId: 'roadmap'
         styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -3155,7 +3160,7 @@ function restaurante1(){
 
     var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
-        position: {lat: 6.262831, lng:  -75.579330},
+        position: {lat: 6.223922, lng:  -75.606627},
         map: map,
         icon: image
     });
@@ -3165,7 +3170,12 @@ function restaurante1(){
 
 function restaurante2(){
 
-
+    $("#restaurante1").css("display", "none");
+    $("#restaurante2").css("display", "block");
+    $("#restaurante3").css("display", "none");
+    $("#restaurante4").css("display", "none");
+    $("#restaurante5").css("display", "none");
+    $("#restaurante6").css("display", "none");
 
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -3324,6 +3334,13 @@ function restaurante2(){
 function restaurante3(){
 
 
+    $("#restaurante1").css("display", "none");
+    $("#restaurante2").css("display", "none");
+    $("#restaurante3").css("display", "block");
+    $("#restaurante4").css("display", "none");
+    $("#restaurante5").css("display", "none");
+    $("#restaurante6").css("display", "none");
+
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
@@ -3479,6 +3496,14 @@ function restaurante3(){
 
 function restaurante4(){
 
+
+
+    $("#restaurante1").css("display", "none");
+    $("#restaurante2").css("display", "none");
+    $("#restaurante3").css("display", "none");
+    $("#restaurante4").css("display", "block");
+    $("#restaurante5").css("display", "none");
+    $("#restaurante6").css("display", "none");
 
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -3638,6 +3663,14 @@ function restaurante4(){
 function restaurante5(){
 
 
+    $("#restaurante1").css("display", "none");
+    $("#restaurante2").css("display", "none");
+    $("#restaurante3").css("display", "none");
+    $("#restaurante4").css("display", "none");
+    $("#restaurante5").css("display", "block");
+    $("#restaurante6").css("display", "none");
+
+
 
 
 
@@ -3795,6 +3828,13 @@ function restaurante5(){
 
 
 function restaurante6(){
+
+    $("#restaurante1").css("display", "none");
+    $("#restaurante2").css("display", "none");
+    $("#restaurante3").css("display", "none");
+    $("#restaurante4").css("display", "none");
+    $("#restaurante5").css("display", "none");
+    $("#restaurante6").css("display", "block");
 
 
 

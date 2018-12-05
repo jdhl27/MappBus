@@ -920,6 +920,12 @@ input[type="radio"]:checked ~ label {
 /*    PAGINA RECOMENDACIONES   */
 
 
+.mapa{
+
+    height: 25vw !important;
+}
+
+
 .btnRestaurantes{
 
     padding-right: 19vw;
@@ -1030,7 +1036,7 @@ input[type="radio"]:checked ~ label {
 
 .luga{
 
-    height: 23vw !important;
+    height: 20vw !important;
 }
 
 .luga::-webkit-scrollbar{
@@ -1040,4 +1046,49 @@ input[type="radio"]:checked ~ label {
 .luga::-webkit-scrollbar-thumb {
     background:#FF5722;
     border-radius:5px;
+}
+
+.cuadroInfo{
+
+    position: absolute;
+
+    height: auto;
+
+    margin-left: 42vw;
+
+    width: 52% !important;
+
+    display: none;
+
+    top: 39vw;
+
+    border: 1px solid #a2a2a2;
+
+    border-radius: 32px;
+}
+
+.cuadroImg{
+
+    width: 34% !important;
+
+    margin-top: 1.9vw;
+
+    margin-left: 2vw;
+
+    float: left;
+
+    position: relative;
+
+    border: 1px solid black;
+}
+
+.cuadroTexto{
+
+    width: 50%;
+
+    float: left;
+}
+
+.infoo{
+    padding-bottom: 9vw;
 }
