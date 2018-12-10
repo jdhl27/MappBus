@@ -3180,7 +3180,7 @@ function restaurante2(){
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
-        center: {lat: 6.262831, lng:  -75.579330},
+        center: {lat: 6.301530, lng:  -75.572534},
         // mapTypeId: 'roadmap'
         styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -3321,7 +3321,7 @@ function restaurante2(){
 
     var image = '/MappBus/imagenes/restaurante3.png';
     var beachMarker = new google.maps.Marker({
-        position: {lat: 6.262831, lng:  -75.579330},
+        position: {lat: 6.301530, lng:  -75.572534},
         map: map,
         icon: image
     });
