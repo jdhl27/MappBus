@@ -4154,6 +4154,13 @@ function bares() {
 
 function bar1(){
 
+    $("#bar1").css("display", "block");
+    $("#bar2").css("display", "none");
+    $("#bar3").css("display", "none");
+    $("#bar4").css("display", "none");
+    $("#bar5").css("display", "none");
+    $("#bar6").css("display", "none");
+
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
@@ -4306,6 +4313,13 @@ function bar1(){
 
 function bar2(){
 
+
+    $("#bar1").css("display", "none");
+    $("#bar2").css("display", "block");
+    $("#bar3").css("display", "none");
+    $("#bar4").css("display", "none");
+    $("#bar5").css("display", "none");
+    $("#bar6").css("display", "none");
 
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -4464,6 +4478,15 @@ function bar2(){
 function bar3(){
 
 
+
+    $("#bar1").css("display", "none");
+    $("#bar2").css("display", "none");
+    $("#bar3").css("display", "block");
+    $("#bar4").css("display", "none");
+    $("#bar5").css("display", "none");
+    $("#bar6").css("display", "none");
+
+
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
         center: {lat: 6.262831, lng:  -75.579330},
@@ -4618,6 +4641,13 @@ function bar3(){
 
 
 function bar4(){
+
+    $("#bar1").css("display", "none");
+    $("#bar2").css("display", "none");
+    $("#bar3").css("display", "none");
+    $("#bar4").css("display", "block");
+    $("#bar5").css("display", "none");
+    $("#bar6").css("display", "none");
 
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -4776,6 +4806,13 @@ function bar4(){
 function bar5(){
 
 
+    $("#bar1").css("display", "none");
+    $("#bar2").css("display", "none");
+    $("#bar3").css("display", "none");
+    $("#bar4").css("display", "none");
+    $("#bar5").css("display", "block");
+    $("#bar6").css("display", "none");
+
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
@@ -4917,7 +4954,7 @@ function bar5(){
     }
 
 
-    var image = '/MappBus/imagenes/bar.png';
+    var image = '/MappBus/imagenes/bares.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -4933,6 +4970,13 @@ function bar5(){
 function bar6(){
 
 
+    $("#bar1").css("display", "none");
+    $("#bar2").css("display", "none");
+    $("#bar3").css("display", "none");
+    $("#bar4").css("display", "none");
+    $("#bar5").css("display", "none");
+    $("#bar6").css("display", "block");
+
 
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 18,
@@ -5074,7 +5118,7 @@ function bar6(){
     }
 
 
-    var image = '/MappBus/imagenes/bar.png';
+    var image = '/MappBus/imagenes/bares.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
@@ -5394,7 +5438,7 @@ function hotel1(){
     }
 
 
-    var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+    var image = '/MappBus/imagenes/hoteles.png';
     var beachMarker = new google.maps.Marker({
         position: {lat: 6.262831, lng:  -75.579330},
         map: map,
