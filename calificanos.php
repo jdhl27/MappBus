@@ -22,7 +22,7 @@ $email_headers .= "From: $email" . "\r\n" .
     "Reply-To: servicioalcliente@mappbus.com" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 
-if (mail($recipient, $subject,$email_content ,$email_headers)){
+if (mail($recipient, $subject, $email_content ,$email_headers)){
     alert('Gracias por calificarnos!');
 }
 else{

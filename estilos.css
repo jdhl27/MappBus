@@ -1111,3 +1111,25 @@ input[type="radio"]:checked ~ label {
 .infoo{
     padding-bottom: 9vw;
 }
+
+/* -------------------FORMULARIO PUBLICIDAD-------------------*/
+
+.labelForm{
+
+    color: black !important;
+
+    height: 0vw;
+
+    font-family: oswald;
+
+    font-size: 2vw;
+
+    cursor: default;
+
+    padding-bottom: 3vw;
+}
+
+.columna{
+
+    margin-right: 0px !important;
+}
