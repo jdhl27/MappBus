@@ -319,7 +319,7 @@ input[type="radio"]:checked ~ label {
     cursor: pointer;
     transition: color 0.6s, background 0.6s;
     padding-left: 2vw;
-    padding-right: 16vw;
+    padding-right: 7.9vw;
     padding-bottom: 0.5vw;
     top: 1vw;
     width: 100%;
@@ -332,9 +332,14 @@ input[type="radio"]:checked ~ label {
     transition: color 0.6s, background 0.6s;
 }
 
-.coonorte{
+.paris{
 
-    padding-right: 21.6vw;
+    padding-right: 12.6vw;
+}
+
+.picacho{
+
+    padding-right: 10.9vw;
 }
 
 .castilla263{
