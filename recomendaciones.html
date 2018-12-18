@@ -55,15 +55,15 @@
         <form action="calificanos.php" method="post">
             <p class="clasificacion">
                 <input id="radio1" type="radio" name="estrellas" value="5">
-                <label onclick="vea()" for="radio1" title="Excelente">★</label>
+                <label for="radio1" title="Excelente">★</label>
                 <input id="radio2" type="radio" name="estrellas" value="4">
-                <label onclick="vea()" for="radio2" title="Bueno">★</label>
+                <label for="radio2" title="Bueno">★</label>
                 <input id="radio3" type="radio" name="estrellas" value="3">
-                <label onclick="vea()" for="radio3" title="Regular">★</label>
+                <label for="radio3" title="Regular">★</label>
                 <input id="radio4" type="radio" name="estrellas" value="2">
-                <label onclick="vea()" for="radio4" title="Malo">★</label>
+                <label for="radio4" title="Malo">★</label>
                 <input id="radio5" type="radio" name="estrellas" value="1">
-                <label onclick="vea()" for="radio5" title="Muy Malo">★</label>
+                <label for="radio5" title="Muy Malo">★</label>
                 <input type="submit" class="btnEnviar enviarCalificacion" value="Enviar" id="btnEnviar2">
             </p>
         </form>
@@ -159,9 +159,9 @@
             <ul>
                 <li><span onclick="restaurante1()">THE JUNGLE BURGUER</span></li>
                 <li><span onclick="restaurante2()">RESTAURANTE LA FONDA</span></li>
-                <li><span onclick="restaurante3()">Restaurantes 3</span></li>
-                <li><span onclick="restaurante4()">Restaurantes 4</span></li>
-                <li><span onclick="restaurante5()">Restaurantes 5</span></li>
+                <li><span onclick="restaurante3()">LAVOCADERIA</span></li>
+                <li><span onclick="restaurante4()">MR. AREPA</span></li>
+                <li><span onclick="restaurante5()">GUADALUPE</span></li>
                 <li><span onclick="restaurante6()">Restaurantes 6</span></li>
 
             </ul>
@@ -227,7 +227,7 @@
         <div class="textInfo">
             <h1>LUGARES DESTACADOS:</h1>
             <ul>
-                <li><span onclick="disco1()">Discoteca 1</span></li>
+                <li><span onclick="disco1()">LA TIENDA</span></li>
                 <li><span onclick="disco2()">Discoteca 2</span></li>
                 <li><span onclick="disco3()">Discoteca 3</span></li>
                 <li><span onclick="disco4()">Discoteca 4</span></li>
@@ -273,7 +273,7 @@
         <div class="textInfo">
             <h1>LUGARES DESTACADOS:</h1>
             <ul>
-                <li><span onclick="heladeria1()">Heladeria 1</span></li>
+                <li><span onclick="heladeria1()">EL BORICUA</span></li>
                 <li><span onclick="heladeria2()">Heladeria 2</span></li>
                 <li><span onclick="heladeria3()">Heladeria 3</span></li>
                 <li><span onclick="heladeria4()">Heladeria 4</span></li>
@@ -352,32 +352,55 @@
 
 
 <div id="restaurante3" class="cuadroInfo" style="width: 18rem;">
-    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/extrella.png" alt="Card image cap">
+    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/lavocaderia.jpg" alt="Card image cap">
     <div class="card-body cuadroTexto">
-        <h5 class="card-title">Restaurante 3</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">LAVOCADERIA</h5>
+        <p class="card-text">
+            Primer restaurante bar en Colombia inspirado en el aguacate. Los cerca de 25 platos entre
+            postres, platos fuertes y bebidas contienen en algún lado esta fruta tan codiciada.
+            <br>
+            <b>TELEFONO:</b> 350 5445419
+            <br>
+            <b>DIRECCIÓN:</b>Cl. 13 #43d-23 <a href="#" onclick="lavocaderaP()">POBLADO</a>
+            <br>
+            Crr 80 #45g-57 <a href="#" onclick="lavocaderaF()">LA FLORESTA</a>
+        </p>
+        <a href="https://www.instagram.com/lavocaderia/" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
 
 <div id="restaurante4" class=" cuadroInfo" style="width: 18rem;">
-    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/extrella.png" alt="Card image cap">
+    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/arepas.jpg" alt="Card image cap">
     <div class="card-body cuadroTexto">
-        <h5 class="card-title">Restaurante 4</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">MR. AREPA</h5>
+        <p class="card-text">
+            Arepas 100% de maíz blanco y amarillo con queso Mozzarella, Chorizos campesinos, Chuzos de Pollo con
+            tocineta, Sandwich Cubano
+            <br>
+            <b>TELEFONO:</b> 312839412
+            <br>
+            <b>DIRECCIÓN:</b>Cl. 104aa #76 -37
+
+        </p>
+        <a href=https://www.facebook.com/Mister-Arepa-490501051327819/" target="_blank" class="btn btn-primary">Visitar
+            sitio web</a>
     </div>
 </div>
 
 <div id="restaurante5" class=" cuadroInfo" style="width: 18rem;">
-    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/extrella.png" alt="Card image cap">
+    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/guada.jpg" alt="Card image cap">
     <div class="card-body cuadroTexto">
-        <h5 class="card-title">Restaurante 5</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h5 class="card-title">GUADALUPE</h5>
+        <p class="card-text">
+            Deliciosa comida mexicana con un toque especial, disfruta de nuestro variado menú(entre comidas y bebidas) y de la excelente atención.
+            <br>
+            <b>TELEFONO:</b> 3014933887
+            <br>
+            <b>DIRECCIÓN:</b>Cr 55 #24a-06 <a href="#" onclick="guadalupeC()">CABAÑAS</a>
+            <br>
+            Cr 76 # 32-128 <a href="#" onclick="guadalupeB()">BELÉN</a>
+        </p>
+        <a href="https://www.instagram.com/belloguadalupe/?hl=es-la" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
 
@@ -577,18 +600,17 @@
 <!-- DISCOTECAS DESTACADOS----------------------------------------------------------------------------------------------- -->
 
 <div id="disco1" class="cuadroInfo" style="width: 18rem;">
-    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/jungle.png" alt="Card image cap">
+    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/latienda.png" alt="Card image cap">
     <div class="card-body cuadroTexto">
-        <h5 class="card-title">DISCOTECA 1</h5>
+        <h5 class="card-title">LA TIENDA</h5>
         <p class="card-text">
-            Tu banda preferida, tu música, tu historia y recuerdos ya puedes tenerla entre tus manos, ya puedes saber su
-            sabor.
-            El Rock and Roll se convierte en sabor.
+            Te invitamos a disfrutar de la mejor parranda del sur de la ciudad, los mejores shows en vivo y donde
+            todos los jueves son de FRISOLES CON GARRA...
             <br>
-            <b>TELEFONO:</b> 5823247
+            <b>TELEFONO:</b> 301 5455
             <br>
-            <b>DIRECCIÓN:</b> Carrera 83C # 17 110</p>
-        <a href="http://www.thejungleburger.com/" target="_blank" class="btn btn-primary">Visitar sitio web</a>
+            <b>DIRECCIÓN:</b> Carrera 47F # 80 Sur - 102</p>
+        <a href="http://www.latiendadesabaneta.com/" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
 
@@ -663,7 +685,6 @@
         <a href="#" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
-
 
 
 <!-- SUPER MERCADOS DESTACADOS----------------------------------------------------------------------------------------------- -->
@@ -757,22 +778,20 @@
 </div>
 
 
-
 <!-- HELADERIAS DESTACADOS----------------------------------------------------------------------------------------------- -->
 
 <div id="heladeria1" class="cuadroInfo" style="width: 18rem;">
-    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/jungle.png" alt="Card image cap">
+    <img class="card-img-top cuadroImg" src="/MappBus/imagenes/boricua.jpg" alt="Card image cap">
     <div class="card-body cuadroTexto">
-        <h5 class="card-title">HELADERIA 1</h5>
+        <h5 class="card-title">EL BORICUA</h5>
         <p class="card-text">
-            Tu banda preferida, tu música, tu historia y recuerdos ya puedes tenerla entre tus manos, ya puedes saber su
-            sabor.
-            El Rock and Roll se convierte en sabor.
+            Ven y disfruta de un agradable sabor para tu paladar, la mejor heladeria ya esta en tu ciudad.
+
             <br>
-            <b>TELEFONO:</b> 5823247
+            <b>TELEFONO:</b> 4164542
             <br>
-            <b>DIRECCIÓN:</b> Carrera 83C # 17 110</p>
-        <a href="http://www.thejungleburger.com/" target="_blank" class="btn btn-primary">Visitar sitio web</a>
+            <b>DIRECCIÓN:</b> Cra. 87 #46-19</p>
+        <a href="#" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
 
@@ -783,9 +802,9 @@
         <p class="card-text">
             Ven y prueba de los delicios almuerzos a tu gusto. <br>Te esperamos para brindarte la mejor atención
             <br>
-            <b>TELEFONO:</b> (4) 2371715
+            <b>TELEFONO:</b> (4) 4164542
             <br>
-            <b>DIRECCIÓN:</b> Cl. 104 #74-21</p>
+            <b>DIRECCIÓN:</b> Cra. 87 #46-19</p>
         <a href="#" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
@@ -847,8 +866,6 @@
         <a href="#" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
-
-
 
 
 <!-- CARNICERIAS DESTACADOS--------------------------------------------------------------------------------------- -->
@@ -940,23 +957,6 @@
         <a href="#" target="_blank" class="btn btn-primary">Visitar sitio web</a>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- ENLACES -->
