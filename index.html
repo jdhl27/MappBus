@@ -55,15 +55,15 @@
         <form action="calificanos.php" method="post">
             <p class="clasificacion">
                 <input id="radio1" type="radio" name="estrellas" value="5">
-                <label onclick="vea()" for="radio1" title="Excelente">★</label>
+                <label for="radio1" title="Excelente">★</label>
                 <input id="radio2" type="radio" name="estrellas" value="4">
-                <label onclick="vea()" for="radio2" title="Bueno">★</label>
+                <label for="radio2" title="Bueno">★</label>
                 <input id="radio3" type="radio" name="estrellas" value="3">
-                <label onclick="vea()" for="radio3" title="Regular">★</label>
+                <label for="radio3" title="Regular">★</label>
                 <input id="radio4" type="radio" name="estrellas" value="2">
-                <label onclick="vea()" for="radio4" title="Malo">★</label>
+                <label for="radio4" title="Malo">★</label>
                 <input id="radio5" type="radio" name="estrellas" value="1">
-                <label onclick="vea()" for="radio5" title="Muy Malo">★</label>
+                <label for="radio5" title="Muy Malo">★</label>
                 <input type="submit" class="btnEnviar enviarCalificacion" value="Enviar" id="btnEnviar2">
             </p>
         </form>
@@ -81,7 +81,7 @@
     <div class="menu">
         <ul>
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#quienesSomos">QUIÉNES SOMOS</a></li>
+            <li><a href="#quienesSomos" class="quie">QUIÉNES SOMOS</a></li>
             <li><a href="recomendaciones.html">RECOMENDACIONES</a></li>
             <li><a href="#contactenos">CONTÁCTENOS</a></li>
             <!--<li><a href="#juego"><img src="imagenes/consola.png" ></a></li>-->
@@ -124,22 +124,24 @@
         </div>
 
         <div class="rutaBtn">
-            <span class=" botonRuta picacho" onclick="ruta284()">TRANS. MEDELLIN 254 PICACHO</span>
+            <span class=" botonRuta picacho" onclick="ruta254()">TRANS. MEDELLIN 254 PICACHO</span>
 
         </div>
 
         <div class="rutaBtn">
-            <span class=" botonRuta castilla263" onclick="ruta284()">CASTILLA 261</span>
+            <span class=" botonRuta castilla263" onclick="ruta261()">CASTILLA 261</span>
 
         </div>
 
         <div class="rutaBtn">
-            <span class=" botonRuta castilla263" onclick="ruta284()">CASTILLA 263</span>
+            <span class=" botonRuta castilla263" onclick="ruta263()">CASTILLA 263</span>
 
         </div>
 
 
     </div>
+
+    <!-- INFORMACION 284 -->
 
     <div class="botones info2" id="informacion284">
         <div class="tituloRutas ">
@@ -167,7 +169,7 @@
         </div>
     </div>
 
-
+    <!-- INFORMACION 283 -->
     <div class="botones info2" id="informacion283">
         <div class="tituloRutas ">
             <h1 class="tituloContactenos">INFORMACIÓN 283</h1>
@@ -177,11 +179,24 @@
         </div>
         <div class="textInfo">
             <h1>LUGARES DESTACADOS:</h1>
+            <ul>
+                <li><span onclick="sena()">SENA Pedregal</span></li>
+                <li><span onclick="itmCastilla()">ITM Castilla</span></li>
+                <li><span onclick="terminalNorte()">Terminal De Transporte Norte</span></li>
+                <li><span onclick="cerroVolador()">Cerro El Volador</span></li>
+                <li><span onclick="uniLuis()">Universidad Luis Amigo</span></li>
+                <li><span onclick="estadio()">Estadio Atanasio Girardot</span></li>
+                <li><span onclick="exitoColombia()">Éxito Colombia</span></li>
+                <li><span onclick="parqueSanAntonio()">Parque San Antonio</span></li>
+                <li><span onclick="tecnoparque()">Tecnoparques</span></li>
+                <li><span onclick="uniNacionalVolador()">Universidad Nacional Sede El Volador</span></li>
+                <li><span onclick="cocacola()">Coca Cola</span></li>
+            </ul>
 
         </div>
     </div>
 
-
+    <!-- INFORMACION 288 -->
     <div class="botones info2" id="informacion288">
         <div class="tituloRutas ">
             <h1 class="tituloContactenos">INFORMACIÓN 288</h1>
@@ -191,7 +206,105 @@
         </div>
         <div class="textInfo">
             <h1>LUGARES DESTACADOS:</h1>
+            <ul>
+                <li><span onclick="sena()">SENA Pedregal</span></li>
+                <li><span onclick="itmCastilla()">ITM Castilla</span></li>
+                <li><span onclick="terminalNorte()">Terminal De Transporte Norte</span></li>
+                <li><span onclick="cerroVolador()">Cerro El Volador</span></li>
+                <li><span onclick="uniLuis()">Universidad Luis Amigo</span></li>
+                <li><span onclick="estadio()">Estadio Atanasio Girardot</span></li>
+                <li><span onclick="exitoColombia()">Éxito Colombia</span></li>
+                <li><span onclick="parqueSanAntonio()">Parque San Antonio</span></li>
+                <li><span onclick="tecnoparque()">Tecnoparques</span></li>
+                <li><span onclick="uniNacionalVolador()">Universidad Nacional Sede El Volador</span></li>
+                <li><span onclick="cocacola()">Coca Cola</span></li>
+            </ul>
 
+        </div>
+    </div>
+
+    <!-- INFORRMACION 254 -->
+    <div class="botones info2" id="informacion254">
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">INFORMACIÓN 254</h1>
+
+        </div>
+        <div class="imgInfo">
+            <img src="imagenes/faviconBus.png" alt="">
+        </div>
+        <div class="textInfo">
+            <h1>LUGARES DESTACADOS:</h1>
+            <ul>
+                <li><span onclick="sena()">SENA Pedregal</span></li>
+                <li><span onclick="itmCastilla()">ITM Castilla</span></li>
+                <li><span onclick="terminalNorte()">Terminal De Transporte Norte</span></li>
+                <li><span onclick="cerroVolador()">Cerro El Volador</span></li>
+                <li><span onclick="uniLuis()">Universidad Luis Amigo</span></li>
+                <li><span onclick="estadio()">Estadio Atanasio Girardot</span></li>
+                <li><span onclick="exitoColombia()">Éxito Colombia</span></li>
+                <li><span onclick="parqueSanAntonio()">Parque San Antonio</span></li>
+                <li><span onclick="tecnoparque()">Tecnoparques</span></li>
+                <li><span onclick="uniNacionalVolador()">Universidad Nacional Sede El Volador</span></li>
+                <li><span onclick="cocacola()">Coca Cola</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- CASTILLA 261 -->
+
+    <div class="botones info2" id="informacion261">
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">INFORMACIÓN 261</h1>
+
+        </div>
+        <div class="imgInfo">
+            <img src="imagenes/faviconBus.png" alt="">
+        </div>
+        <div class="textInfo">
+            <h1>LUGARES DESTACADOS:</h1>
+            <ul>
+                <li><span onclick="sena()">SENA Pedregal</span></li>
+                <li><span onclick="itmCastilla()">ITM Castilla</span></li>
+                <li><span onclick="terminalNorte()">Terminal De Transporte Norte</span></li>
+                <li><span onclick="cerroVolador()">Cerro El Volador</span></li>
+                <li><span onclick="uniLuis()">Universidad Luis Amigo</span></li>
+                <li><span onclick="estadio()">Estadio Atanasio Girardot</span></li>
+                <li><span onclick="exitoColombia()">Éxito Colombia</span></li>
+                <li><span onclick="parqueSanAntonio()">Parque San Antonio</span></li>
+                <li><span onclick="tecnoparque()">Tecnoparques</span></li>
+                <li><span onclick="uniNacionalVolador()">Universidad Nacional Sede El Volador</span></li>
+                <li><span onclick="cocacola()">Coca Cola</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- INFORMACION 263 -->
+
+    <div class="botones info2" id="informacion263">
+        <div class="tituloRutas ">
+            <h1 class="tituloContactenos">INFORMACIÓN 263</h1>
+
+        </div>
+        <div class="imgInfo">
+            <img src="imagenes/faviconBus.png" alt="">
+        </div>
+        <div class="textInfo">
+            <h1>LUGARES DESTACADOS:</h1>
+            <ul>
+                <li><span onclick="sena()">SENA Pedregal</span></li>
+                <li><span onclick="itmCastilla()">ITM Castilla</span></li>
+                <li><span onclick="terminalNorte()">Terminal De Transporte Norte</span></li>
+                <li><span onclick="cerroVolador()">Cerro El Volador</span></li>
+                <li><span onclick="uniLuis()">Universidad Luis Amigo</span></li>
+                <li><span onclick="estadio()">Estadio Atanasio Girardot</span></li>
+                <li><span onclick="exitoColombia()">Éxito Colombia</span></li>
+                <li><span onclick="parqueSanAntonio()">Parque San Antonio</span></li>
+                <li><span onclick="tecnoparque()">Tecnoparques</span></li>
+                <li><span onclick="uniNacionalVolador()">Universidad Nacional Sede El Volador</span></li>
+                <li><span onclick="cocacola()">Coca Cola</span></li>
+            </ul>
         </div>
     </div>
 
@@ -263,8 +376,10 @@
             <span style="font-family: oswald; font-size: 1.5vw;">ENTÉRESE DEL CLIMA DE LA CIUDAD!</span>
 
             <iframe id="87080c96880ee0220821c75897cc025e"
-                    src="https://www.theweather.com/getwid/87080c96880ee0220821c75897cc025e" frameborder="0" scrolling="no"
-                    name="flipe" style="width: 175px; color: rgb(134, 134, 134); height: 233px; border: 1px solid #5fc4d1; margin-top:1vw; cursor: default;"></iframe>
+                    src="https://www.theweather.com/getwid/87080c96880ee0220821c75897cc025e" frameborder="0"
+                    scrolling="no"
+                    name="flipe"
+                    style="width: 175px; color: rgb(134, 134, 134); height: 233px; border: 1px solid #5fc4d1; margin-top:1vw; cursor: default;"></iframe>
         </div>
 
     </div>
@@ -302,7 +417,8 @@
 <!--<param name="allowScriptAccess" value="always">-->
 <!--<param name="allowNetworking" value="internal">-->
 <!--&lt;!&ndash;[if IE]-->
-<param name="wmode" value="transparent"/><![endif]&ndash;&gt;-->
+<param name="wmode" value="transparent"/>
+<![endif]&ndash;&gt;-->
 <!--&lt;!&ndash;[if !IE]>&lt;!&ndash;>
 <param name="wmode" value="direct"><!--<![endif]&ndash;&gt;-->
 <!--<param name="bgcolor" value="#FFFFFF">-->
@@ -310,9 +426,6 @@
 <!--</object>-->
 
 <!--</section>-->
-
-
-
 
 
 <!-- FOOTER -->

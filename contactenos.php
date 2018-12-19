@@ -23,7 +23,7 @@ $email_headers .= "From: $email" . "\r\n" .
     "X-Mailer: PHP/" . phpversion();
 
 if (mail($recipient, $subject, $email_content, $email_headers)){
-    header('Location: http://localhost:63342/MappBus/index.html?_ijt=u5o8kmkrl6u7l16ilifs12m1m8');
+    header('Location: http://localhost:63342/MappBus/index.html');
 }
 else{
     echo "Ha ocurrido un error, inténtelo de nuevo más tarde.";

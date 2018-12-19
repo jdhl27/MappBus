@@ -1101,6 +1101,8 @@ input[type="radio"]:checked ~ label {
     border: 1px solid #a2a2a2;
 
     border-radius: 32px;
+
+    padding-bottom: 2vw;
 }
 
 .cuadroImg{

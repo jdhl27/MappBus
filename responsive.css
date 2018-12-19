@@ -299,11 +299,20 @@
         cursor: pointer;
         transition: color 0.6s, background 0.6s;
         padding-left: 2vw;
-        padding-right: 48.5vw;
+        padding-right: 22.5vw;
         padding-bottom: 0.5vw;
         top: 1vw;
         width: 100%;
     }
+
+    .paris{
+        padding-right: 37.7vw;
+    }
+
+    .picacho{
+        padding-right: 33vw;
+    }
+
 
     .botonRuta:hover{
         color: #5fc4d1;
@@ -673,7 +682,7 @@
         background-color: #5fc4d1;
         height: 0.6vw;
         width: 20%;
-        top: 382vw;
+        top: 455vw;
         right: 0vw;
     }
 
