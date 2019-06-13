@@ -233,6 +233,7 @@ input[type="radio"]:checked ~ label {
     display: none;
 }
 
+
 .imgInfo{
     width: 25%;
     float: left;
@@ -242,6 +243,8 @@ input[type="radio"]:checked ~ label {
 .imgInfo img{
     width: 100%;
 }
+
+
 
 .textInfo{
     width: 74%;
@@ -264,7 +267,9 @@ input[type="radio"]:checked ~ label {
 
 .textInfo ul>li{
 
-    list-style:circle;
+    /* list-style: circle; */
+
+    list-style-type: square;
 }
 
 .textInfo ul>li>span{
@@ -275,7 +280,7 @@ input[type="radio"]:checked ~ label {
 
     cursor: pointer;
 
-    color: #a2a2a200;
+    color: white;
 }
 
 .textInfo ul>li>span:hover{
@@ -299,14 +304,15 @@ input[type="radio"]:checked ~ label {
     border: 4px solid #c1c1c1;
     text-shadow: 1px 1px 1px #020208;
     overflow: auto;
-    box-shadow: -10px 5px 12px #999;
+    box-shadow: 0px -1px 10px #30e5d0;
+    /* background-color: #2f2f2f; */
 }
 .botones::-webkit-scrollbar{
     width:6px;
 }
 
 .botones::-webkit-scrollbar-thumb {
-    background:#77aae6;
+    background: #0b2239;
     border-radius:5px;
 }
 
@@ -314,7 +320,7 @@ input[type="radio"]:checked ~ label {
 
     height: 4vw;
 
-    background-color: #d9e1e6ba;
+    background-color: #0B2239;
 }
 
 .tituloRut{
@@ -335,12 +341,12 @@ input[type="radio"]:checked ~ label {
     left:  0;
     margin-left: 0.5vw;
     color: #fff;
-    background: #5fc4d1;
+    background: #0b2239;
     border-radius: 6px;
     font-size: 1.4vw;
     font-family: oswald;
     cursor: pointer;
-    transition: color 0.6s, background 0.6s;
+    transition: color 0.4s, background 0.4s;
     padding-left: 2vw;
     padding-right: 7.9vw;
     padding-bottom: 0.5vw;
@@ -385,17 +391,20 @@ input[type="radio"]:checked ~ label {
     height: 6vw;
     position: fixed !important;
     width: 100%;
-    transition: background 0.6s, height 0.6s;
+    transition: background 0.6s, height 0.6s,border 0.6s;
     z-index: 100;
-    border-bottom: 1px solid #afafaf;
+    border-bottom: 1px solid #ffdead;
 }
 
 .navbarScroll {
-    background-color: #afafaf;
+    background-color: #0B2239;
     height: 4vw;
     position: fixed !important;
     width: 100%;
     z-index: 100;
+    transition: background 0.6s, height 0.6s, border 0.6s, box-shadow 0.6s;
+    border-bottom: 1px solid #2f2f2f;
+    box-shadow: 0px -1px 10px #ff9032;
 }
 
 .titulo {
@@ -408,11 +417,11 @@ input[type="radio"]:checked ~ label {
     margin-left: 10vw;
     cursor: default;
     padding-top: 0.6vw;
-    color: black;
-    transition: all 0.4s;
+    color: white;
+    transition: all 0.4s, color 0.6s;
 }
 
-.tituloBlanco h1 {color: white;transition: all 0.4s;margin-left: 1vw;margin-top: -1.6vw;}
+.tituloBlanco h1 {color: #5a372c;transition: all 0.4s, color 0.6s;margin-left: 1vw;margin-top: -1.6vw;}
 
 .menu {
     width: 43%;
@@ -424,6 +433,7 @@ input[type="radio"]:checked ~ label {
     width: 27%;
     float: left;
     list-style: none;
+    transition: background 0.6s;
 }
 
 .menu ul li:nth-child(1) {
@@ -441,24 +451,24 @@ input[type="radio"]:checked ~ label {
 .menu ul li a {
     text-decoration: none;
     font-family: oswald;
-    transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
     font-size: 1.4vw;
-    color: #383737;
+    color: navajowhite;
+    transition: color 0.3s, padding-top 0.3s, padding-button 0.3s;
 }
 
 .menu ul li a:hover {
 
-    color: #8882829e;
+    color: #5a372c;
 
-    border-bottom: 1.5px solid #4e4c4c;
+    border-bottom: 1.5px solid #5a372c;
 
-    border-top: 1.5px solid #4e4c4c;
+    border-top: 1.5px solid #5a372c;
 
     padding-bottom: 1px;
 
     padding-top: 1px;
 
-    transition: color 0.6s, padding-bottom 0.6s, padding-top 0.6s;
+    transition: color 0.3s, padding-bottom 0.3s, padding-top 0.3s;
 }
 
 
@@ -472,6 +482,7 @@ input[type="radio"]:checked ~ label {
 .menuScroll ul li {
     width: 27%;
     float: left;
+    transition: background 0.6s;
     list-style: none;
 }
 
@@ -490,18 +501,18 @@ input[type="radio"]:checked ~ label {
 .menuScroll ul li a {
     text-decoration: none;
     font-family: oswald;
-    transition: color 0.4s, padding-top 0.4s, padding-button 0.4s;
+    transition: color 0.3s, padding-top 0.3s, padding-button 0.3s;
     font-size: 1.4vw;
     color: white;
 }
 
 .menuScroll ul li a:hover {
 
-    color: #0000009e;
+    color: #5a372c;
 
-    border-bottom: 1.5px solid #fff;
+    border-bottom: 1.5px solid #5a372c;
 
-    border-top: 1.5px solid #fff;
+    border-top: 1.5px solid #5a372c;
 
     padding-bottom: 1px;
 
@@ -579,7 +590,7 @@ input[type="radio"]:checked ~ label {
 .photo img{
     width: 100%;
     height: 280px;
-    object-fit: cover;
+    /* object-fit: cover; */
     filter: grayscale(100%) contrast(120%);
     box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
     display: block;
@@ -650,15 +661,15 @@ input[type="radio"]:checked ~ label {
 
     width: 73%;
 
-    color: white;
+    color: #30e5d0;
 
-    background: #afafaf;
+    background: #0B2239;
 
     padding-left: 1vw;
 
     border-radius: 13px;
 
-    text-shadow: 0px 1px 47px #000000;
+    /* text-shadow: 0px 1px 47px #000000; */
 }
 
 .textoQuienesSomos h2:before{
@@ -682,6 +693,8 @@ input[type="radio"]:checked ~ label {
     width: 75%;
 
     padding-top: 1vw;
+
+    color: white;
 }
 
 
@@ -708,7 +721,7 @@ input[type="radio"]:checked ~ label {
 }
 
 .formularioContactenos{
-    width: 33%;
+    width: 35%;
     float:left;
     position: relative;
     padding-top: 4vw;
@@ -719,6 +732,8 @@ input[type="radio"]:checked ~ label {
     font-family: oswaldLight;
 
     font-size: 1.6vw;
+
+    color: white;
 }
 
 .tituloContactenos{
@@ -728,11 +743,12 @@ input[type="radio"]:checked ~ label {
     padding-top: 0.5vw;
     padding-bottom: 2vw;
     text-align: center;
+    color: #ff9032;
 }
 
 .formulario{
     position: relative;
-    width: 102%;
+    width: 100%;
 }
 .formulario>input{
     position: relative;
@@ -740,18 +756,18 @@ input[type="radio"]:checked ~ label {
     margin-bottom: 13px;
     height: 49px;
     padding-left: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 7px;
-    color: #797474;
+    border: 1px solid #ff90324f;
+    color: #ff9032;
     font-family: oswald;
+    background-color: #0b2239;
 }
 .formulario input::placeholder{
     position: relative;
     width: 100%;
-    margin-bottom: 13px;
     color: rgba(96, 96, 96, 0.5);
-    font-family: "Raleway Regular";
-    font-size: 15px;
+    font-family: oswald;
+    font-size: 16px;
 }
 .formulario label{
     position: relative;
@@ -761,17 +777,27 @@ input[type="radio"]:checked ~ label {
     top: -1.4vw;
     margin-bottom: 10px;
 }
+
+.formulario label>a{
+    color: #585d61;
+}
 .formulario textarea{
     position: relative;
     width: 100%;
     margin-bottom: 10px;
     height: 100px;
     padding-left: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #ff90324f;
     margin-top: 1px;
+    background-color: #0b2239;
     border-radius: 7px;
     font-family: oswald;
-    color: #797474;
+    color: #ff9032;
+}
+
+.formulario textarea::placeholder{
+
+    color:rgba(96, 96, 96, 0.5);
 }
 .formulario div span{
     position: relative;
@@ -841,6 +867,7 @@ input[type="radio"]:checked ~ label {
     font-size: 1.7vw;
     margin-top: 3vw;
     padding-left: 2vw;
+    color: #9bf00b;
 }
 
 .ubicacion p{
@@ -852,6 +879,7 @@ input[type="radio"]:checked ~ label {
     padding-left: 4.6vw;
     margin-left: 4.7vw;
     margin-top: 1vw;
+    color: white;
 }
 
 
@@ -880,9 +908,11 @@ footer{
 
     position: relative;
 
-    background-color: #afafaf;
+    background-color: #0b2239;
 
     margin-top: 6vw;
+
+    box-shadow: 0px -1px 10px #ff9032;
 }
 
 .redesS{

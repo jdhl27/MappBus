@@ -50,6 +50,18 @@ $(document).ready(function () {
         });
     }
 
+    if ($(window).width() >= 768) {
+        $(window).scroll(function () {
+
+            if ($(this).scrollTop()) {
+                $('.titulo').addClass('tituloBlanco');
+            } else {
+                $('.titulo').removeClass('tituloBlanco');
+            }
+
+        });
+    }
+
 
 });
 
@@ -131,7 +143,7 @@ $('.hamburger').click(function () {
 
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 13,
+        zoom: 18,
         center: {lat: 6.2615713, lng: -75.5745807},
         styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -236,7 +248,7 @@ function initMap() {
             var marker = new google.maps.Marker({
                 position: pos,
                 map: map,
-                title: 'Mi ubicación',
+                title: 'Mi Ubicación',
                 draggable: true,
                 animation: google.maps.Animation.DROP,
 
@@ -385,7 +397,7 @@ function ruta284() {
             var marker = new google.maps.Marker({
                 position: pos,
                 map: map,
-                title: 'Mi ubicación',
+                title: 'Mi Ubicación',
                 draggable: true,
                 animation: google.maps.Animation.DROP,
 
@@ -15124,7 +15136,6 @@ function carniceria6() {
                 position: pos,
                 map: map,
                 title: 'Mi ubicación',
-                draggable: true,
                 animation: google.maps.Animation.DROP,
 
             });
