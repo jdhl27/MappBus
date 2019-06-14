@@ -11,14 +11,14 @@ $tipo = $_POST['inputType'];
 
 
 //INSERTANDO DATOS A BASE DE DATOS
-mysqli_query($conectar,"INSERT INTO ubicacion (nombre,direccion,lat,lng,tipo)
-                              VALUES ('$nombre','$direccion','$latitud','$longitud','$tipo')");
-
+if (mysqli_query($conectar,"INSERT INTO ubicacionEmpresa (nombreEmpresa,direccionEmpresa,latitud,longitud,tipo)
+                              VALUES ('$nombre','$direccion','$latitud','$longitud','$tipo')"))
+{
+     header('Location: http://localhost:63342/MappBus/index.html');
+}else{
+    echo "ERROR";
+}
 
 //CERRANDO CONEXION
 mysqli_close($conectar);
-
-echo 'EXITO';
-
-?>
 

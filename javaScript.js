@@ -1,10 +1,30 @@
+
+/*---------------------------- CONEXION SERVIDOR FORMULARIOS SIN RECARGAR*/
+function objetoAjax(){
+    var xmlhttp = false;
+    try {
+        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false; }
+    }
+
+    if (!xmlhttp && typeof XMLHttpRequest!=='undefined') {
+        xmlhttp = new XMLHttpRequest();
+    }
+    return xmlhttp;
+}
+
 /*--------------------------- ENLACES SUAVES*/
 
 $(function () {
 
     $('a[href*=\\#]').click(function () {
 
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 
             var $target = $(this.hash);
 
@@ -70,7 +90,7 @@ $(document).ready(function () {
 
 
 var url = window.location.href;
-if (url == "http://localhost:63342/MappBus/recomendaciones.html") {
+if (url === "http://localhost:63342/MappBus/recomendaciones.html") {
     $(".contenido").css("display", "none")
     $("#btn-cerrar").css("display", "none")
     $(".modal").attr("style", "display: none !important")
@@ -78,8 +98,7 @@ if (url == "http://localhost:63342/MappBus/recomendaciones.html") {
 
 }
 
-var url = window.location.href;
-if (url == "http://localhost:63342/MappBus/index.html") {
+if (url === "http://localhost:63342/MappBus/index.html") {
     $(".contenido").css("display", "none")
     $("#btn-cerrar").css("display", "none")
     $(".modal").attr("style", "display: none !important")
@@ -87,24 +106,22 @@ if (url == "http://localhost:63342/MappBus/index.html") {
 }
 
 
-var url = window.location.href;
-if (url == "http://localhost:63342/MappBus/index.html#inicio") {
+if (url === "http://localhost:63342/MappBus/index.html#inicio") {
     $(".contenido").css("display", "none")
     $("#btn-cerrar").css("display", "none")
     $(".modal").attr("style", "display: none !important")
 
 }
 
-var url = window.location.href;
-if (url == "http://localhost:63342/MappBus/index.html#quienesSomos") {
+
+if (url === "http://localhost:63342/MappBus/index.html#quienesSomos") {
     $(".contenido").css("display", "none")
     $("#btn-cerrar").css("display", "none")
     $(".modal").attr("style", "display: none !important")
 
 }
 
-var url = window.location.href;
-if (url == "http://localhost:63342/MappBus/index.html#contactenos") {
+if (url === "http://localhost:63342/MappBus/index.html#contactenos") {
     $(".contenido").css("display", "none")
     $("#btn-cerrar").css("display", "none")
     $(".modal").attr("style", "display: none !important")
@@ -286,7 +303,6 @@ function initMap() {
 
 
 }
-
 
 /*    ------------------------------------------------------------------ RUTA TRANS MEDELLIN 284 */
 

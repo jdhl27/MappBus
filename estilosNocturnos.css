@@ -57,6 +57,11 @@ html, body {
     padding: 0;
 }
 
+body{
+
+    background-color: #151f29 !important;
+}
+
 
 /*  MODAL CALIFICACION*/
 
@@ -81,9 +86,9 @@ html, body {
     width: 100%;
     height: 100%;
     margin: auto;
-    background: #9ea4a9;
+    background: #0b2239;
     border-radius: 10px;
-    /* margin-left: 33vw; */
+    border: 1px solid #ff9032;
 }
 
 .contenido h2 {
@@ -92,6 +97,7 @@ html, body {
     margin-top: 1vw;
     font-family: oswald;
     width: 71%;
+    color: white;
 }
 
 #cerrar {
@@ -188,24 +194,45 @@ input[type="radio"]:checked ~ label {
 
 .enviarCalificacion{
 
-    border-radius: 10px !important;
-
     font-family: oswald;
 
     letter-spacing: 2px;
 
-    position: absolute !important;
+    position: absolute;
 
     top: 11vw;
+
+    background-color: #ff9032;
+
+    left:  0;
+
+    margin-left: 10.5vw;
+
+    color: #fff;
+
+    width: 33%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 1.5vw;
+
+    height: 40px;
+
+    cursor: pointer;
+
+    transition: color 0.6s, background 0.6s;
 }
 
 
 .enviarCalificacion:hover{
 
-    color: #5fc4d1 !important;
-    background: rgb(255, 255, 255) !important;
-    transition: color 0.6s, background 0.6s !important;
+    color: #0b2239;
 
+    background-color: #6b3d15;
+
+    transition: color 0.6s, background 0.6s !important;
 }
 
 
@@ -312,7 +339,7 @@ input[type="radio"]:checked ~ label {
 }
 
 .botones::-webkit-scrollbar-thumb {
-    background: #0b2239;
+    background: #23827d;
     border-radius:5px;
 }
 
@@ -821,31 +848,20 @@ input[type="radio"]:checked ~ label {
     width: 4% !important;
 }
 .btnEnviar{
-
     position: relative;
-
     left:  0;
-
     margin-left: 10.5vw;
-
     color: #fff !important;
-
     background: #5fc4d1;
-
     width: 33% !important;
-
     border:  none !important;
-
     border-radius: 50px;
-
-    font-size: 20px;
-
+    font-size: 1.5vw;
     height: 40px !important;
-
     cursor: pointer;
-
     transition: color 0.6s, background 0.6s;
 }
+
 .btnEnviar:hover{
     color: #5fc4d1 !important;
     background: rgba(96, 96, 96, 0.1);
@@ -883,6 +899,14 @@ input[type="radio"]:checked ~ label {
 }
 
 
+
+/* CLIMA */
+
+#cont_87080c96880ee0220821c75897cc025e{
+    color: white !important;
+    background-color: #151f29 !important;
+}
+
 /* JUEGO */
 
 .juego{
@@ -910,7 +934,7 @@ footer{
 
     background-color: #0b2239;
 
-    margin-top: 6vw;
+    margin-top: 4vw;
 
     box-shadow: 0px -1px 10px #ff9032;
 }
@@ -941,19 +965,21 @@ footer{
     filter: opacity(.5);
 }
 
-.copy{height: 3vw;background-color: #5a5a5a;}
+.copy{height: 3vw;background-color: #253442;}
 
 .copy span{
 
-    font-size: 1.3vw;
+    font-size: 1.2vw;
 
-    margin-left: 39vw;
+    margin-left: 39.7vw;
 
     font-family: oswald;
 
     position: relative;
 
     top: 0.5vw;
+
+    color: #ffbe87;
 }
 
 
@@ -1010,25 +1036,24 @@ input[type="radio"]:checked ~ label {
 
     padding-right: 19vw;
 
-    background: #FF5722;
+    background-color: #0B2239;
 }
 
 
 .btnRestaurantes:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
 
 .btnBares{
     padding-right: 23.5vw;
-    background: #FF5722;
 }
 
 .btnBares:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
@@ -1036,24 +1061,24 @@ input[type="radio"]:checked ~ label {
 
 .btnHoteles{
     padding-right: 22.4vw;
-    background: #FF5722;
+    background: #0B2239;
 }
 
 .btnHoteles:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
 
 .btnDiscotecas{
     padding-right: 20.5vw;
-    background: #FF5722;
+    background: #0B2239;
 }
 
 .btnDiscotecas:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
@@ -1061,12 +1086,13 @@ input[type="radio"]:checked ~ label {
 .btnSuper{
 
     padding-right: 17.4vw;
-    background: #FF5722;
+
+    background: #0B2239;
 }
 
 .btnSuper:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
@@ -1074,12 +1100,13 @@ input[type="radio"]:checked ~ label {
 .btnHeladerias{
 
     padding-right: 20.5vw;
-    background: #FF5722;
+
+    background: #0B2239;
 }
 
 .btnHeladerias:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
@@ -1088,12 +1115,12 @@ input[type="radio"]:checked ~ label {
 
     padding-right: 20vw;
 
-    background: #FF5722;
+    background: #0B2239;
 }
 
 .btnCarnicerias:hover{
     color: #FF5722 !important;
-    border: 1px solid #ffffff !important;
+    border: 1px solid #FF5722 !important;
     background: rgba(96, 96, 96, 0.1);
     transition: color 0.6s, background 0.6s;
 }
@@ -1101,9 +1128,13 @@ input[type="radio"]:checked ~ label {
 
 .tituloFavoritos{
 
-    background-color: bisque;
+    background-color: #0B2239;
 }
 
+.favorito{
+
+    box-shadow: 0px -1px 10px #0061c1;
+}
 
 .favorito::-webkit-scrollbar{
     width:6px;
@@ -1117,6 +1148,8 @@ input[type="radio"]:checked ~ label {
 .luga{
 
     height: 20vw !important;
+
+    box-shadow: 0px -1px 10px #0061c1;
 }
 
 .luga::-webkit-scrollbar{
@@ -1173,6 +1206,16 @@ input[type="radio"]:checked ~ label {
 
 .infoo{
     padding-bottom: 9vw;
+}
+
+
+
+.card-title{
+    color:wheat;
+}
+
+.card-text{
+    color: white;
 }
 
 /* -------------------FORMULARIO PUBLICIDAD-------------------*/

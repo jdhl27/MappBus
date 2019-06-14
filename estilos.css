@@ -197,6 +197,26 @@ input[type="radio"]:checked ~ label {
     position: absolute !important;
 
     top: 11vw;
+
+    left:  0;
+
+    margin-left: 10.5vw;
+
+    color: #fff !important;
+
+    background: #5fc4d1;
+
+    width: 33% !important;
+
+    border:  none !important;
+
+    font-size: 20px;
+
+    height: 40px !important;
+
+    cursor: pointer;
+
+    transition: color 0.6s, background 0.6s;
 }
 
 
