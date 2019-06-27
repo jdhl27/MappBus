@@ -91,7 +91,7 @@
 
 
 <!-- FORMULARIO -->
-<form action="registro.php" method="post" ectype ="multipart/form-data">
+<form name="formularioRegistroEmpresa" onsubmit=" return enviarDatos()"  method="post" ectype ="multipart/form-data">
     <h1> DATOS DE LA EMPRESA <img src="/MappBus/imagenes/faviconBus.png" alt=""></h1>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -99,8 +99,8 @@
             <input type="text" class="form-control"name="inputNombre" id="inputNombre" placeholder="Nombre" required>
         </div>
         <div class="form-group col-md-6">
-            <label for="inputAddress">Dirección</label>
-            <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="Descripción" required>
+            <label for="inputDireccion">Dirección</label>
+            <input type="text" class="form-control" name="inputAddress" id="inputDireccion" placeholder="Dirección" required>
         </div>
     </div>
     <div class="form-row">
@@ -142,10 +142,13 @@
     <!-- MENSAJE EXITO -->
     <div class="mensaje">
 
-        <span>Su empresa ya se encuentra en MappBus </span> <button class="btn btn-default">Ver</button>
+        <span id="answerExito"> </span> <!-- <button class="btn btn-default">Ver</button> -->
     </div>
 </form>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/MappBus/javaScript.js"></script>
 
 </body>
 </html>

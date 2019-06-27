@@ -1,21 +1,27 @@
 
 /*---------------------------- CONEXION SERVIDOR FORMULARIOS SIN RECARGAR*/
-function objetoAjax(){
-    var xmlhttp = false;
-    try {
-        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-    } catch (e) {
+function enviarDatos(){
 
-        try {
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        } catch (E) {
-            xmlhttp = false; }
-    }
+    var nombre = document.getElementById('inputNombre').value;
+    var direccion = document.getElementById('inputDireccion').value;
+    var latitud = document.getElementById('inputLat').value;
+    var longitud = document.getElementById('inputLng').value;
+    var tipo = document.getElementById('inputType').value;
 
-    if (!xmlhttp && typeof XMLHttpRequest!=='undefined') {
-        xmlhttp = new XMLHttpRequest();
-    }
-    return xmlhttp;
+    var dataEnviar = 'nombre='+nombre + 'direccion='+direccion + 'latitud='+latitud + 'longitud='+longitud + 'tipo='+tipo;
+
+  $.ajax({
+     type:'post',
+     url: 'registro.php',
+     data: dataEnviar,
+      success: function(respuesta){
+          $("#answerExito").html(respuesta);
+      }
+  });
+
+  return false;
+
+
 }
 
 /*--------------------------- ENLACES SUAVES*/
@@ -15194,6 +15200,5 @@ function carniceria6() {
         icon: image
     });
 }
-
 
 

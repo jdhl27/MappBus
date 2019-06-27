@@ -4,17 +4,18 @@
 require("conectarBD.php");
 
 $nombre = $_POST['inputNombre'];
-$direccion = $_POST['inputAddress'];
+$direccion = $_POST['inputDireccion'];
 $latitud = $_POST['inputLat'];
 $longitud = $_POST['inputLng'];
 $tipo = $_POST['inputType'];
 
 
 //INSERTANDO DATOS A BASE DE DATOS
-if (mysqli_query($conectar,"INSERT INTO ubicacionEmpresa (nombreEmpresa,direccionEmpresa,latitud,longitud,tipo)
+if (mysqli_query($conectar,"INSERT INTO ubicacion (nombre,direccion,lat,lng,tipo)
                               VALUES ('$nombre','$direccion','$latitud','$longitud','$tipo')"))
 {
-     header('Location: http://localhost:63342/MappBus/index.html');
+    echo "BIEN";
+
 }else{
     echo "ERROR";
 }
