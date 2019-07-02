@@ -14,21 +14,56 @@
             font-family: oswaldBold;
             src: url(fuentes/Oswald-SemiBold.ttf);
         }
+        @font-face {
+            font-family: oswald;
+            src: url(fuentes/Oswald-Regular.ttf);
+        }
 
+        body{
+            background-color: #151f29;
+        }
 
-        form{
+        form {
             width: 49%;
-            margin-left: 26vw;
+            margin-left: 25vw;
             margin-top: 3vw;
             padding: 1vw;
-            border: 5px solid #FF5722;
+            border: 2px solid #eaad9a;
             border-radius: 22px;
-            background: #dc803442;
+            background: #0B2239;
+
+        }
+
+        #formularioRegistroEmpresa input{
+            position: relative;
+            width: 100%;
+            margin-bottom: 13px;
+            height: 49px;
+            padding-left: 10px;
+            border-radius: 7px;
+            border: 1px solid  #f7f7f757;
+            color: #ff9032;
+            font-family: oswald;
+            background-color: #0b2239;
+        }
+        #formularioRegistroEmpresa input::placeholder{
+            position: relative;
+            width: 100%;
+            color: rgba(96, 96, 96, 0.5);
+            font-family: oswald;
+            font-size: 16px;
         }
 
         h1{
             width: 94%;
-            margin-left: 5vw;
+            margin-left: 9vw;
+            color: #5a372c;
+            font-family: oswaldBold;
+        }
+
+        label{
+            color: #5a372c;
+            font-family: oswaldBold;
         }
 
         button{
@@ -51,28 +86,27 @@
             border: 1px solid white;
 
         }
+
+
         .mensaje{
-            width: 100%;
-            height: 3.8vw;
-            background: #79DC41;
+            display: none;
+            width: 80%;
+            height: 2.8vw;
+            margin-left: 4.5vw;
             margin-top: 2vw;
-            border-top: 1px solid #4CAF50;
-            border-bottom: 1px solid #4CAF50;
-            display: block;
+            background-color: #fdfdfd00;
+            border-top: 1px solid #1c9d39;
+            border-bottom: 1px solid #1c9d39
         }
 
-        .mensaje h1{
-
-        }
-
-        .mensaje span{
+        #answerExito{
+            margin-left: 4.5vw;
+            color: #9bf00b;
             font-family: oswaldBold;
-            margin-left: 8vw;
             font-size: 1.5vw;
-
         }
 
-        .mensaje button{
+/*        .mensaje button{
             margin-left: 1vw;
             background: #ff5722;
             color: white;
@@ -83,7 +117,7 @@
             background-color: #e04f21;
             border: 1px solid white;
         }
-
+*/
 
     </style>
 
@@ -94,33 +128,33 @@
 
 
 <!-- FORMULARIO -->
-<form name="formularioRegistroEmpresa" onsubmit=" return enviarDatos()"  method="post" ectype ="multipart/form-data">
+<form id="formularioRegistroEmpresa"  method="post" ectype ="multipart/form-data">
     <h1> DATOS DE LA EMPRESA <img src="/MappBus/imagenes/faviconBus.png" alt=""></h1>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputNombre">Nombre</label>
-            <input type="text" class="form-control"name="inputNombre" id="inputNombre" placeholder="Nombre" required>
+            <label for="inputName">Nombre</label>
+            <input type="text" class="form-control"name="inputName" id="inputName" placeholder="Ejemplo: MappBus" required>
         </div>
         <div class="form-group col-md-6">
             <label for="inputDireccion">Dirección</label>
-            <input type="text" class="form-control" name="inputAddress" id="inputDireccion" placeholder="Dirección" required>
+            <input type="text" class="form-control" name="inputDireccion" id="inputDireccion" placeholder="Ejemplo: Cr 68 #53-65" required>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputLat">Latitud</label>
-            <input type="text" class="form-control" name="inputLat" id="inputLat" placeholder="6.254809" required>
+            <input type="text" class="form-control" name="inputLat" id="inputLat" placeholder="Ejemplo: 6.254809" required>
         </div>
 
         <div class="form-group col-md-6">
             <label for="inputLng">Longitud</label>
-            <input type="text" class="form-control" name="inputLng" id="inputLng" placeholder="-75.573577" required>
+            <input type="text" class="form-control" name="inputLng" id="inputLng" placeholder="Ejemplo: -75.573577" required>
         </div>
     </div>
     <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputType">Categoria</label>
-                <input type="text" class="form-control" name="inputType" id="inputType" placeholder="Restaurante" required>
+                <input type="text" class="form-control" name="inputType" id="inputType" placeholder="Ejemplo: Restaurante" required>
                 <!--  <select id="inputType" class="form-control" required>
                     <option selected>Seleccionar</option>
                     <option>...</option>
@@ -140,7 +174,7 @@
         <!--</div>-->
     <!--</div>-->
 
-    <button type="submit" class="btn btn-primary btnEnviar">Enviar</button>
+    <button type="button" id="enviarDatos" class="btn btn-primary btnEnviar">Enviar</button>
 
     <!-- MENSAJE EXITO -->
     <div class="mensaje">

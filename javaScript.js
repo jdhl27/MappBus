@@ -1,28 +1,19 @@
 
 /*---------------------------- CONEXION SERVIDOR FORMULARIOS SIN RECARGAR*/
-function enviarDatos(){
+$("#enviarDatos").click(function(){
 
-    var nombre = document.getElementById('inputNombre').value;
-    var direccion = document.getElementById('inputDireccion').value;
-    var latitud = document.getElementById('inputLat').value;
-    var longitud = document.getElementById('inputLng').value;
-    var tipo = document.getElementById('inputType').value;
+        $.ajax({
+            type:'post',
+            url: 'registro.php',
+            data: $('#formularioRegistroEmpresa').serialize(),
+            success: function(respuesta){
+                $('#answerExito').html(respuesta);
+            }
+        });
 
-    var dataEnviar = 'nombre='+nombre + 'direccion='+direccion + 'latitud='+latitud + 'longitud='+longitud + 'tipo='+tipo;
-
-  $.ajax({
-     type:'post',
-     url: 'registro.php',
-     data: dataEnviar,
-      success: function(respuesta){
-          $("#answerExito").html(respuesta);
-      }
-  });
-
-  return false;
+});
 
 
-}
 
 /*--------------------------- ENLACES SUAVES*/
 
