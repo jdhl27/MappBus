@@ -1,9 +1,9 @@
 <?php
-$nombre = utf8_decode($_POST['nombre']);
+$nombre = $_POST['nombre'];
 $email = $_POST["email"];
 $tel = $_POST["tel"];
-$ciudad = utf8_decode($_POST['ciudad']);
-$mensaje = utf8_decode($_POST['mensaje']);
+$ciudad = $_POST['ciudad'];
+$mensaje = $_POST['mensaje'];
 
 
 
