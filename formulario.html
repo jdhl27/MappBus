@@ -4,90 +4,93 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/MappBus/imagenes/faviconBus.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <title>MappBus | Formulario </title>
+
+
+
+    <!-- ESTILOS FORMULARIO -->
+    <style>
+        @font-face {
+            font-family: oswaldBold;
+            src: url(fuentes/Oswald-SemiBold.ttf);
+        }
+
+
+        form{
+            width: 49%;
+            margin-left: 26vw;
+            margin-top: 3vw;
+            padding: 1vw;
+            border: 5px solid #FF5722;
+            border-radius: 22px;
+            background: #dc803442;
+        }
+
+        h1{
+            width: 94%;
+            margin-left: 5vw;
+        }
+
+        button{
+            margin-left: 20vw;
+        }
+
+        img{
+            width: 10%;
+        }
+
+        .btnEnviar{
+            background: #ff5722;
+            border-color: #ff5722;
+        }
+
+
+        .btnEnviar:hover{
+
+            background-color: #e04f21;
+            border: 1px solid white;
+
+        }
+        .mensaje{
+            width: 100%;
+            height: 3.8vw;
+            background: #79DC41;
+            margin-top: 2vw;
+            border-top: 1px solid #4CAF50;
+            border-bottom: 1px solid #4CAF50;
+            display: block;
+        }
+
+        .mensaje h1{
+
+        }
+
+        .mensaje span{
+            font-family: oswaldBold;
+            margin-left: 8vw;
+            font-size: 1.5vw;
+
+        }
+
+        .mensaje button{
+            margin-left: 1vw;
+            background: #ff5722;
+            color: white;
+            margin-top: 6px;
+        }
+
+        .mensaje button:hover{
+            background-color: #e04f21;
+            border: 1px solid white;
+        }
+
+
+    </style>
+
+
 
 </head>
 <body>
-
-<!-- ESTILOS FORMULARIO -->
-<style>
-    @font-face {
-        font-family: oswaldBold;
-        src: url(fuentes/Oswald-SemiBold.ttf);
-    }
-
-
-    form{
-        width: 49%;
-        margin-left: 26vw;
-        margin-top: 3vw;
-        padding: 1vw;
-        border: 5px solid #FF5722;
-        border-radius: 22px;
-        background: #dc803442;
-    }
-
-    h1{
-        width: 94%;
-        margin-left: 5vw;
-    }
-
-    button{
-        margin-left: 20vw;
-    }
-
-    img{
-        width: 10%;
-    }
-
-    .btnEnviar{
-        background: #ff5722;
-        border-color: #ff5722;
-    }
-
-
-    .btnEnviar:hover{
-
-        background-color: #e04f21;
-        border: 1px solid white;
-
-    }
-    .mensaje{
-        width: 100%;
-        height: 3.8vw;
-        background: #79DC41;
-        margin-top: 2vw;
-        border-top: 1px solid #4CAF50;
-        border-bottom: 1px solid #4CAF50;
-        display: block;
-    }
-
-    .mensaje h1{
-
-    }
-
-    .mensaje span{
-        font-family: oswaldBold;
-        margin-left: 8vw;
-        font-size: 1.5vw;
-
-    }
-
-    .mensaje button{
-        margin-left: 1vw;
-        background: #ff5722;
-        color: white;
-        margin-top: 6px;
-    }
-
-    .mensaje button:hover{
-        background-color: #e04f21;
-        border: 1px solid white;
-    }
-
-
-</style>
 
 
 <!-- FORMULARIO -->
@@ -146,7 +149,7 @@
     </div>
 </form>
 
-
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="/MappBus/javaScript.js"></script>
 
