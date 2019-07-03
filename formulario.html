@@ -118,6 +118,9 @@
             border: 1px solid white;
         }
 */
+        .obligatorio{
+            color: red;
+        }
 
     </style>
 
@@ -128,43 +131,39 @@
 
 
 <!-- FORMULARIO -->
-<form id="formularioRegistroEmpresa"  method="post" ectype ="multipart/form-data">
+<form id="formularioRegistroEmpresa" name="formularioRegistroEmpresa" method="post" ectype ="multipart/form-data">
     <h1> DATOS DE LA EMPRESA <img src="/MappBus/imagenes/faviconBus.png" alt=""></h1>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputName">Nombre</label>
-            <input type="text" class="form-control"name="inputName" id="inputName" placeholder="Ejemplo: MappBus" required>
+            <label for="inputName">Nombre<span class="obligatorio">*</span></label>
+            <input type="text" class="form-control" value="" onkeyup ="validarCampos('form')" name="inputName" id="inputName" placeholder="Ejemplo: MappBus" required>
         </div>
         <div class="form-group col-md-6">
-            <label for="inputDireccion">Dirección</label>
-            <input type="text" class="form-control" name="inputDireccion" id="inputDireccion" placeholder="Ejemplo: Cr 68 #53-65" required>
+            <label for="inputDireccion">Dirección<span class="obligatorio">*</span></label>
+            <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputDireccion" id="inputDireccion" placeholder="Ejemplo: Cr 68 #53-65" required>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <label for="inputLat">Latitud</label>
-            <input type="text" class="form-control" name="inputLat" id="inputLat" placeholder="Ejemplo: 6.254809" required>
+            <label for="inputLat">Latitud<span class="obligatorio">*</span></label>
+            <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputLat" id="inputLat" placeholder="Ejemplo: 6.254809" required>
         </div>
 
         <div class="form-group col-md-6">
-            <label for="inputLng">Longitud</label>
-            <input type="text" class="form-control" name="inputLng" id="inputLng" placeholder="Ejemplo: -75.573577" required>
+            <label for="inputLng">Longitud<span class="obligatorio">*</span></label>
+            <input type="text" class="form-control" value="" onkeyup ="validarCampos('form')" name="inputLng" id="inputLng" placeholder="Ejemplo: -75.573577" required>
         </div>
     </div>
     <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="inputType">Categoria</label>
-                <input type="text" class="form-control" name="inputType" id="inputType" placeholder="Ejemplo: Restaurante" required>
+                <label for="inputType">Categoria<span class="obligatorio">*</span></label>
+                <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputType" id="inputType" placeholder="Ejemplo: Restaurante" required>
                 <!--  <select id="inputType" class="form-control" required>
                     <option selected>Seleccionar</option>
                     <option>...</option>
                 </select>-->
              </div>
 
-        <!-- <div class="form-group col-md-6">
-                <label for="inputLogo">Logo</label>
-                <input type="file" class="imgLogo" name="inputLogo" id="inputLogo" >
-            </div> -->
     </div>
 
     <!--<div class="form-row">-->
@@ -174,7 +173,8 @@
         <!--</div>-->
     <!--</div>-->
 
-    <button type="button" id="enviarDatos" class="btn btn-primary btnEnviar">Enviar</button>
+    <button type="button" id="enviarDatos" disabled="disabled" class="btn btn-primary btnEnviar">Enviar</button>
+
 
     <!-- MENSAJE EXITO -->
     <div class="mensaje">

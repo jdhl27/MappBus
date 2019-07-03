@@ -1,19 +1,73 @@
 
-/*---------------------------- CONEXION SERVIDOR FORMULARIOS SIN RECARGAR*/
-$("#enviarDatos").click(function(){
 
-        $.ajax({
-            type:'post',
-            url: 'registro.php',
-            data: $('#formularioRegistroEmpresa').serialize(),
-            success: function(respuesta){
-                $('#answerExito').html(respuesta);
-            }
-        });
+
+
+function validarCampos(form) {
+
+    var nombre = document.getElementById('inputName').value;
+    var direccion = document.getElementById('inputDireccion').value;
+    var latitud = document.getElementById('inputLat').value;
+    var longitud = document.getElementById('inputLng').value;
+    var tipo = document.getElementById('inputType').value;
+    var btnEnviar = document.getElementById('enviarDatos');
+
+
+
+    if (nombre !="" && direccion !="" && latitud !="" && longitud !="" && tipo !="") {
+
+        btnEnviar.disabled=false;
+
+    }else{
+        btnEnviar.disabled=true;
+    }
+}
+
+
+
+/*---------------------------- CONEXION SERVIDOR FORMULARIOS SIN RECARGAR*/
+$("#enviarDatos").click(function() {
+
+    var nombre = document.getElementById('inputName').value;
+    var direccion = document.getElementById('inputDireccion').value;
+    var latitud = document.getElementById('inputLat').value;
+    var longitud = document.getElementById('inputLng').value;
+    var tipo = document.getElementById('inputType').value;
+    var btnEnviar = document.getElementById('enviarDatos');
+
+    var datos = "inputName=" + nombre + "&inputDireccion=" + direccion + "&inputLat=" + latitud + "&inputLng=" + longitud + "&inputType=" + tipo;
+
+    if (nombre !== "" || direccion !== "" || latitud !== "" || longitud !== "" || tipo !== "") {
+        btnEnviar.disabled=true;
+
+         $.ajax({
+             type:'post',
+             url: 'registro.php',
+             data: datos, //$('#formularioRegistroEmpresa').serialize()
+             success: function(respuesta){
+                 $('#answerExito').html(respuesta);
+             }
+         });
+
+
+         nombre = document.getElementById('inputName').disabled = true;
+         direccion = document.getElementById('inputDireccion').disabled = true;
+         latitud = document.getElementById('inputLat').disabled = true;
+         longitud = document.getElementById('inputLng').disabled = true;
+         tipo = document.getElementById('inputType').disabled = true;
+         /*btnEnviar.style.opacity = "0";
+         btnEnviar.style.visibility = "hidden";*/
+         btnEnviar.replace(/<[^>]*>?/g, '');
+         $(btnEnviar).text();
+
+
+
+    } else {
+        console.log("mal");
+
+    }
+
 
 });
-
-
 
 /*--------------------------- ENLACES SUAVES*/
 
@@ -15191,5 +15245,3 @@ function carniceria6() {
         icon: image
     });
 }
-
-

@@ -400,13 +400,13 @@
     .titulo {
         font-family: titulo;
         width: 30%;
+        margin-top: -3vw;
     }
 
     .titulo h1 {
         font-size: 12vw;
         margin-left: -1vw;
         cursor: default;
-        padding-top: 2.6vw;
     }
 
     .menu {
