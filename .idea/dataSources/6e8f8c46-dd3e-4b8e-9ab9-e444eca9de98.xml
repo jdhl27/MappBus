@@ -933,48 +933,76 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="236" parent="7" name="ubicacion"/>
-    <column id="237" parent="236" name="id">
+    <table id="236" parent="7" name="categoria"/>
+    <table id="237" parent="7" name="empresa"/>
+    <column id="238" parent="236" name="idCategoria">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="236" name="nombreCategoria">
+      <Position>2</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="240" parent="236" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idCategoria</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="241" parent="237" name="idEmpresa">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="236" name="nombre">
+    <column id="242" parent="237" name="nombre">
       <Position>2</Position>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="236" name="direccion">
+    <column id="243" parent="237" name="direccion">
       <Position>3</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="236" name="lat">
+    <column id="244" parent="237" name="lat">
       <Position>4</Position>
       <DataType>float(10,6 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="236" name="lng">
+    <column id="245" parent="237" name="lng">
       <Position>5</Position>
       <DataType>float(10,6 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="236" name="tipo">
+    <column id="246" parent="237" name="categoria_id">
       <Position>6</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="243" parent="236" name="PRIMARY">
+    <index id="247" parent="237" name="categoria_id">
+      <ColNames>categoria_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="248" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>idEmpresa</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="249" parent="237" name="empresa_ibfk_1">
+      <ColNames>categoria_id</ColNames>
+      <RefSchemaName>mappbus</RefSchemaName>
+      <RefTableName>categoria</RefTableName>
+      <RefColNames>idCategoria</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

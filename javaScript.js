@@ -1,42 +1,41 @@
 
 
-
-
 function validarCampos(form) {
 
     var nombre = document.getElementById('inputName').value;
-    var direccion = document.getElementById('inputDireccion').value;
+    var tipo = document.getElementById("inputType").value;
     var latitud = document.getElementById('inputLat').value;
     var longitud = document.getElementById('inputLng').value;
-    var tipo = document.getElementById('inputType').value;
+    var direccion = document.getElementById('inputDireccion').value;
     var btnEnviar = document.getElementById('enviarDatos');
 
 
 
-    if (nombre !="" && direccion !="" && latitud !="" && longitud !="" && tipo !="") {
+        if (nombre !="" && tipo !="0" && latitud !="" && longitud !="" && direccion !="") {
 
-        btnEnviar.disabled=false;
+            btnEnviar.disabled=false;
 
-    }else{
-        btnEnviar.disabled=true;
-    }
+        }else{
+            btnEnviar.disabled=true;
+        }
+
 }
-
 
 
 /*---------------------------- CONEXION SERVIDOR FORMULARIOS SIN RECARGAR*/
 $("#enviarDatos").click(function() {
 
     var nombre = document.getElementById('inputName').value;
-    var direccion = document.getElementById('inputDireccion').value;
+    var tipo = document.getElementById("inputType").value;
     var latitud = document.getElementById('inputLat').value;
     var longitud = document.getElementById('inputLng').value;
-    var tipo = document.getElementById('inputType').value;
+    var direccion = document.getElementById('inputDireccion').value;
     var btnEnviar = document.getElementById('enviarDatos');
+    //var logo = document.getElementById('inputLogo').value;
 
-    var datos = "inputName=" + nombre + "&inputDireccion=" + direccion + "&inputLat=" + latitud + "&inputLng=" + longitud + "&inputType=" + tipo;
+    var datos = "inputName=" + nombre + "&inputDireccion=" + direccion + "&inputLat=" + latitud + "&inputLng=" + longitud  +"&inputType=" + tipo;
 
-    if (nombre !== "" || direccion !== "" || latitud !== "" || longitud !== "" || tipo !== "") {
+    if (nombre !== "" || tipo !== "0" || latitud !== "" || longitud !== "" || direccion !== "") {
         btnEnviar.disabled=true;
 
          $.ajax({
@@ -53,13 +52,8 @@ $("#enviarDatos").click(function() {
          direccion = document.getElementById('inputDireccion').disabled = true;
          latitud = document.getElementById('inputLat').disabled = true;
          longitud = document.getElementById('inputLng').disabled = true;
+         logo = document.getElementById('inputLogo').disabled = true;
          tipo = document.getElementById('inputType').disabled = true;
-         /*btnEnviar.style.opacity = "0";
-         btnEnviar.style.visibility = "hidden";*/
-         btnEnviar.replace(/<[^>]*>?/g, '');
-         $(btnEnviar).text();
-
-
 
     } else {
         console.log("mal");

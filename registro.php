@@ -3,20 +3,24 @@
 //LLAMANDO CONEXION
 require("conectarBD.php");
 
+/*if (isset($_POST['inputType'])){
+    $categoria = $_POST['inputType'];
+}
+*/
+
 $nombre = $_POST['inputName'];
 $direccion = $_POST['inputDireccion'];
 $latitud = $_POST['inputLat'];
 $longitud = $_POST['inputLng'];
-$tipo = $_POST['inputType'];
+$logo = addcslashes(file_get_contents($_FILES['inputLogo']['tmp_name']));
+$categoria = $_POST['inputType'];
 
 
 //INSERTANDO DATOS A BASE DE DATOS
-if (mysqli_query($conectar,"INSERT INTO ubicacion (nombre,direccion,lat,lng,tipo)
-                              VALUES ('$nombre','$direccion','$latitud','$longitud','$tipo')"))
+if (mysqli_query($conectar,"INSERT INTO empresa (nombre,direccion,lat,lng,logo,categoria_id)
+                              VALUES ('$nombre','$direccion','$latitud','$longitud','$logo','$categoria')"))
 {
     echo "<style>.mensaje{display:block;}</style>BIEN! ". strtoupper($nombre) ." SE REGISTRÓ EN MAPPBUS.";
-
-    header('Refresh: 5;Location: http://localhost:63342/MappBus/index.html');
 
 
 }else{

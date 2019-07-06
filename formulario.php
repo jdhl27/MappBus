@@ -1,6 +1,17 @@
+<?php
+
+include "conectarBD.php";
+
+$query =  mysqli_query($conectar,"SELECT * FROM categoria");
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/MappBus/imagenes/faviconBus.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -52,6 +63,29 @@
             color: rgba(96, 96, 96, 0.5);
             font-family: oswald;
             font-size: 16px;
+        }
+
+        #formularioRegistroEmpresa select{
+            background-color: #ffffff00;
+            font-family: oswald;
+            height: 3.5vw;
+            color: #ff9032;
+            border-color: #f7f7f757;
+            cursor: pointer;
+        }
+        #formularioRegistroEmpresa select>option{
+            background-color: #151f29;
+            color: white;
+            cursor: pointer;
+
+        }
+
+        #selecc{
+            color: #5a372c !important;
+        }
+        #formularioRegistroEmpresa input[type="file" i]{
+
+
         }
 
         h1{
@@ -106,18 +140,6 @@
             font-size: 1.5vw;
         }
 
-/*        .mensaje button{
-            margin-left: 1vw;
-            background: #ff5722;
-            color: white;
-            margin-top: 6px;
-        }
-
-        .mensaje button:hover{
-            background-color: #e04f21;
-            border: 1px solid white;
-        }
-*/
         .obligatorio{
             color: red;
         }
@@ -138,10 +160,27 @@
             <label for="inputName">Nombre<span class="obligatorio">*</span></label>
             <input type="text" class="form-control" value="" onkeyup ="validarCampos('form')" name="inputName" id="inputName" placeholder="Ejemplo: MappBus" required>
         </div>
+
         <div class="form-group col-md-6">
-            <label for="inputDireccion">Dirección<span class="obligatorio">*</span></label>
-            <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputDireccion" id="inputDireccion" placeholder="Ejemplo: Cr 68 #53-65" required>
+            <label for="inputType">Categoria<span class="obligatorio">*</span></label>
+            <!--   <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputType" required> -->
+            <select id="inputType" name="inputType" class="form-control" onkeyup ="validarCampos('form')" required>
+                <option selected disabled="disabled" value="0" id="selecc">Seleccionar</option>
+                <?php
+                while ($categoria= mysqli_fetch_array($query)) {
+
+                    ?>
+
+                    <option value="<?php echo $categoria['idCategoria'] ?>"><?php echo $categoria['nombreCategoria']?></option>
+                    <?php
+
+                }
+                ?>
+            </select>
         </div>
+
+
+
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -155,23 +194,17 @@
         </div>
     </div>
     <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="inputType">Categoria<span class="obligatorio">*</span></label>
-                <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputType" id="inputType" placeholder="Ejemplo: Restaurante" required>
-                <!--  <select id="inputType" class="form-control" required>
-                    <option selected>Seleccionar</option>
-                    <option>...</option>
-                </select>-->
-             </div>
+        <div class="form-group col-md-6">
+            <label for="inputDireccion">Dirección<span class="obligatorio">*</span></label>
+            <input type="text" class="form-control" value=""  onkeyup ="validarCampos('form')" name="inputDireccion" id="inputDireccion" placeholder="Ejemplo: Cr 68 #53-65" required>
+        </div>
 
+        <div class="form-group col-md-6">
+            <label for="inputLogo">Logo<span class="obligatorio">*</span></label>
+            <input type="file" class="form-control" id="inputFoto" name="inputLogo">
+        </div>
     </div>
 
-    <!--<div class="form-row">-->
-        <!--<div class="form-group col-md-6">-->
-            <!--<label for="inputFoto">Logo</label>-->
-            <!--<input type="file" class="form-control" id="inputFoto" placeholder="jpg/png">-->
-        <!--</div>-->
-    <!--</div>-->
 
     <button type="button" id="enviarDatos" disabled="disabled" class="btn btn-primary btnEnviar">Enviar</button>
 
