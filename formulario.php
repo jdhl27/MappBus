@@ -84,7 +84,7 @@ $query =  mysqli_query($conectar,"SELECT * FROM categoria");
             color: #5a372c !important;
         }
         #formularioRegistroEmpresa input[type="file" i]{
-
+            cursor:pointer;
 
         }
 
