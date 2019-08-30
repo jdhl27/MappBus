@@ -31,9 +31,9 @@ $("#enviarDatos").click(function() {
     var longitud = document.getElementById('inputLng').value;
     var direccion = document.getElementById('inputDireccion').value;
     var btnEnviar = document.getElementById('enviarDatos');
-    //var logo = document.getElementById('inputLogo').value;
+    var logo = document.images['inputLogo'];
 
-    var datos = "inputName=" + nombre + "&inputDireccion=" + direccion + "&inputLat=" + latitud + "&inputLng=" + longitud  +"&inputType=" + tipo;
+    var datos = "inputName=" + nombre + "&inputDireccion=" + direccion + "&inputLat=" + latitud + "&inputLng=" + longitud + "&inputLogo=" + logo +"&inputType=" + tipo;
 
     if (nombre !== "" || tipo !== "0" || latitud !== "" || longitud !== "" || direccion !== "") {
         btnEnviar.disabled=true;
@@ -56,7 +56,7 @@ $("#enviarDatos").click(function() {
          tipo = document.getElementById('inputType').disabled = true;
 
     } else {
-        console.log("mal");
+        console.log("AJax falló");
 
     }
 

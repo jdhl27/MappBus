@@ -158,7 +158,7 @@ $query =  mysqli_query($conectar,"SELECT * FROM categoria");
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputName">Nombre<span class="obligatorio">*</span></label>
-            <input type="text" class="form-control" value="" onkeyup ="validarCampos('form')" name="inputName" id="inputName" placeholder="Ejemplo: MappBus" required>
+            <input type="text" class="form-control" value="" onkeyup ="validarCampos('form')" name="inputName" id="inputName" placeholder="Ejemplo: MappBus" required autofocus>
         </div>
 
         <div class="form-group col-md-6">
@@ -201,7 +201,7 @@ $query =  mysqli_query($conectar,"SELECT * FROM categoria");
 
         <div class="form-group col-md-6">
             <label for="inputLogo">Logo<span class="obligatorio">*</span></label>
-            <input type="file" class="form-control" id="inputFoto" name="inputLogo">
+            <input type="file" class="form-control" id="inputLogo" name="inputLogo" accept="image/png, .jpeg, .jpg" required>
         </div>
     </div>
 

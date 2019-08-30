@@ -12,8 +12,10 @@ $nombre = $_POST['inputName'];
 $direccion = $_POST['inputDireccion'];
 $latitud = $_POST['inputLat'];
 $longitud = $_POST['inputLng'];
-$logo = addcslashes(file_get_contents($_FILES['inputLogo']['tmp_name']));
+$logo = addslashes(file_get_contents($_FILES['inputLogo']['tmp_name']));
 $categoria = $_POST['inputType'];
+
+
 
 
 //INSERTANDO DATOS A BASE DE DATOS
